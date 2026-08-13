@@ -3,160 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Omwandho Graphic & Auto Lab</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
-    line-height: 1.6;
+body{
+    font-family:Arial, sans-serif;
+    background:#101010;
+    color:#fff;
+    line-height:1.6;
 }
 
-header {
-    padding: 22px;
-    text-align: center;
-    border-bottom: 1px solid #333;
+header{
+    background:#0b0b0b;
+    padding:22px 15px;
+    text-align:center;
+    border-bottom:1px solid #333;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #f5b400;
+.logo{
+    color:#ffbd00;
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:2px;
 }
 
-.tagline {
-    color: #ccc;
-    margin: 5px 0 15px;
+.tagline{
+    color:#ddd;
+    margin-top:4px;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 8px;
-    font-size: 14px;
+nav{
+    margin-top:15px;
 }
 
-nav a:hover {
-    color: #f5b400;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
 }
 
-.hero {
-    text-align: center;
-    padding: 75px 20px;
-    background: linear-gradient(135deg, #111, #222);
+nav a:hover{
+    color:#ffbd00;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#151515,#222);
 }
 
-.gold {
-    color: #f5b400;
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
 }
 
-.hero p {
-    color: #ccc;
-    max-width: 650px;
-    margin: auto;
-    font-size: 18px;
+.hero h1 span{
+    color:#ffbd00;
 }
 
-.buttons {
-    margin-top: 28px;
+.hero p{
+    color:#ddd;
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 14px 24px;
-    margin: 5px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
+.buttons{
+    margin-top:30px;
 }
 
-.primary {
-    background: #f5b400;
-    color: #111;
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    margin:6px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    background:#ffbd00;
+    color:#111;
 }
 
-.secondary {
-    border: 1px solid #f5b400;
-    color: #f5b400;
+.btn.dark{
+    background:transparent;
+    border:2px solid #ffbd00;
+    color:#ffbd00;
 }
 
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 55px 20px;
+section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
-.title {
-    text-align: center;
-    margin-bottom: 30px;
+.title{
+    text-align:center;
+    color:#ffbd00;
+    font-size:32px;
+    margin-bottom:10px;
 }
 
-.title h2 {
-    color: #f5b400;
-    font-size: 30px;
+.subtitle{
+    text-align:center;
+    color:#bbb;
+    margin-bottom:35px;
 }
 
-.title p {
-    color: #bbb;
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+.service{
+    background:#1c1c1c;
+    border:1px solid #333;
+    border-radius:15px;
+    padding:30px 20px;
+    text-align:center;
+    transition:.3s;
 }
 
-.card {
-    background: #1d1d1d;
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 28px;
-    text-align: center;
+.service:hover{
+    transform:translateY(-5px);
+    border-color:#ffbd00;
 }
 
-.card h3 {
-    color: #f5b400;
-    margin-bottom: 12px;
+.service h3{
+    color:#ffbd00;
+    font-size:22px;
+    margin-bottom:10px;
 }
 
-.card p {
-    color: #ccc;
+.service p{
+    color:#bbb;
+    margin-bottom:20px;
 }
 
-.contact {
-    text-align: center;
-    background: #181818;
-    border-radius: 12px;
+.small-btn{
+    display:inline-block;
+    padding:10px 18px;
+    background:#ffbd00;
+    color:#111;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
 }
 
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #080808;
-    color: #888;
+.portfolio{
+    background:#151515;
+    max-width:none;
 }
 
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 32px;
+.portfolio-inner{
+    max-width:1100px;
+    margin:auto;
+}
+
+.work-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.work{
+    background:#202020;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #333;
+}
+
+.work img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.work-info{
+    padding:18px;
+}
+
+.work-info h3{
+    color:#ffbd00;
+}
+
+.work-info p{
+    color:#bbb;
+}
+
+.order{
+    text-align:center;
+    background:#ffbd00;
+    color:#111;
+    max-width:none;
+}
+
+.order h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.order p{
+    margin-bottom:20px;
+}
+
+.order .btn{
+    background:#111;
+    color:white;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    background:#1c1c1c;
+    padding:30px;
+    border-radius:15px;
+    max-width:600px;
+    margin:auto;
+}
+
+.contact-box p{
+    margin:12px 0;
+    color:#ddd;
+}
+
+.contact-box strong{
+    color:#ffbd00;
+}
+
+footer{
+    text-align:center;
+    padding:30px 15px;
+    background:#080808;
+    color:#999;
+}
+
+@media(max-width:600px){
+    .hero h1{
+        font-size:35px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px;
+    nav a{
+        margin:0 5px;
+        font-size:14px;
     }
 }
 </style>
@@ -165,170 +267,382 @@ footer {
 <body>
 
 <header>
+    <div class="logo">OMWANDHO</div>
+    <div class="tagline">Graphic & Auto Lab</div>
 
-<div class="logo">OMWANDHO</div>
-
-<div class="tagline">
-Graphic & Auto Lab
-</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#order">Order</a>
-<a href="#contact">Contact</a>
-</nav>
-
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 
 <section class="hero" id="home">
 
-<h1>
-Design. Print. <span class="gold">Paint. Transform.</span>
-</h1>
+    <h1>Design. Print. <span>Transform.</span></h1>
 
-<p>
-Professional graphic design, printing, branding,
-car painting and automotive services in Thika, Kiganjo.
-</p>
+    <p>
+        Professional graphic design, printing, branding,
+        car painting and automotive services in Thika, Kiganjo.
+    </p>
 
-<div class="buttons">
+    <div class="buttons">
+        <a class="btn" href="#services">VIEW SERVICES</a>
 
-<a class="btn primary" href="#order">
-ORDER NOW
-</a>
-
-<a class="btn secondary"
-href="https://wa.me/254758560246">
-WHATSAPP US
-</a>
-
-</div>
+        <a class="btn dark"
+        href="https://wa.me/254758560246">
+        WHATSAPP US
+        </a>
+    </div>
 
 </section>
 
 
 <section id="services">
 
-<div class="title">
+    <h2 class="title">Our Services</h2>
 
-<h2>Our Services</h2>
-
-<p>
-Creative and professional services for individuals and businesses.
-</p>
-
-</div>
+    <p class="subtitle">
+        Choose a service to see what we offer.
+    </p>
 
 
-<div class="cards">
+    <div class="service-grid">
 
-<div class="card">
+        <!-- GRAPHIC DESIGN -->
 
-<h3>🎨 Graphic Design</h3>
+        <div class="service">
 
-<p>
-Logos, posters, flyers, banners, business cards,
-menus, stickers and other creative designs.
-</p>
+            <h3>🎨 Graphic Design</h3>
 
-</div>
+            <p>
+                Creative designs for businesses,
+                events and personal projects.
+            </p>
 
+            <a class="small-btn" href="#graphic">
+                VIEW SERVICES
+            </a>
 
-<div class="card">
-
-<h3>🖨️ Printing & Branding</h3>
-
-<p>
-Banner printing, stickers, shop branding,
-business materials and vehicle branding.
-</p>
-
-</div>
+        </div>
 
 
-<div class="card">
+        <!-- PRINTING & BRANDING -->
 
-<h3>🚗 Auto Lab</h3>
+        <div class="service">
 
-<p>
-Car painting, panel beating, body repair
-and automotive services.
-</p>
+            <h3>🖨️ Printing & Branding</h3>
 
-</div>
+            <p>
+                Professional printing and complete
+                branding solutions.
+            </p>
+
+            <a class="small-btn" href="#printing">
+                VIEW SERVICES
+            </a>
+
+        </div>
+
+
+        <!-- CAR PAINTING -->
+
+        <div class="service">
+
+            <h3>🚗 Car Painting & Auto</h3>
+
+            <p>
+                Vehicle painting, body work and
+                automotive services.
+            </p>
+
+            <a class="small-btn" href="#cars">
+                VIEW SERVICES
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GRAPHIC DESIGN SUB SERVICES -->
+
+<section id="graphic">
+
+    <h2 class="title">🎨 Graphic Design</h2>
+
+    <p class="subtitle">
+        Professional designs made for your business or event.
+    </p>
+
+    <div class="service-grid">
+
+        <div class="service">
+            <h3>Logo Design</h3>
+            <p>Professional logos and brand identity.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Posters & Flyers</h3>
+            <p>Eye-catching promotional and event designs.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Business Cards</h3>
+            <p>Professional business cards for your brand.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Menus</h3>
+            <p>Restaurant, hotel and food menu designs.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Social Media Designs</h3>
+            <p>Promotional graphics for Facebook, TikTok, Instagram and WhatsApp.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Business Advertisements</h3>
+            <p>Professional promotional graphics for businesses.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRINTING -->
+
+<section id="printing">
+
+    <h2 class="title">🖨️ Printing & Branding</h2>
+
+    <p class="subtitle">
+        From design to printing and complete installation.
+    </p>
+
+    <div class="service-grid">
+
+        <div class="service">
+            <h3>Banner Printing</h3>
+            <p>High-quality banners in different sizes.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Business Branding</h3>
+            <p>Professional branding for shops and businesses.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Vehicle Branding</h3>
+            <p>Turn your vehicle into a powerful advertising tool.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Banner Frames</h3>
+            <p>Strong and durable metal banner frames.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Banner Stands</h3>
+            <p>Portable stands for events and businesses.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+        <div class="service">
+            <h3>Installation</h3>
+            <p>Complete setup and installation services.</p>
+            <a class="small-btn" href="#portfolio">SEE WORK</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CAR SERVICES -->
+
+<section id="cars">
+
+    <h2 class="title">🚗 Car Painting & Auto Services</h2>
+
+    <p class="subtitle">
+        Quality automotive body and painting services.
+    </p>
+
+    <div class="service-grid">
+
+        <div class="service">
+            <h3>Car Painting</h3>
+            <p>Professional vehicle spray painting.</p>
+            <a class="small-btn" href="#order">GET QUOTE</a>
+        </div>
+
+        <div class="service">
+            <h3>Panel Beating</h3>
+            <p>Body repair and restoration work.</p>
+            <a class="small-btn" href="#order">GET QUOTE</a>
+        </div>
+
+        <div class="service">
+            <h3>Body Repairs</h3>
+            <p>Repair damaged vehicle body panels.</p>
+            <a class="small-btn" href="#order">GET QUOTE</a>
+        </div>
+
+        <div class="service">
+            <h3>Spray Painting</h3>
+            <p>Professional finishing and repainting.</p>
+            <a class="small-btn" href="#order">GET QUOTE</a>
+        </div>
+
+        <div class="service">
+            <h3>Vehicle Restoration</h3>
+            <p>Give your vehicle a fresh new look.</p>
+            <a class="small-btn" href="#order">GET QUOTE</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+<div class="portfolio-inner">
+
+    <h2 class="title">Our Recent Work</h2>
+
+    <p class="subtitle">
+        Real work created and delivered by Omwandho Graphic & Auto Lab.
+    </p>
+
+    <div class="work-grid">
+
+        <div class="work">
+            <img src="images/kelly-poster.jpg" alt="Event poster design">
+            <div class="work-info">
+                <h3>Event Poster</h3>
+                <p>Creative event promotional design.</p>
+            </div>
+        </div>
+
+
+        <div class="work">
+            <img src="images/albanus-banner.jpg" alt="Albanus Fashion banner">
+            <div class="work-info">
+                <h3>Business Banner</h3>
+                <p>Professional business advertising banner.</p>
+            </div>
+        </div>
+
+
+        <div class="work">
+            <img src="images/bee-bytes.jpg" alt="Bee Bytes branding">
+            <div class="work-info">
+                <h3>Food Business Branding</h3>
+                <p>Complete food business advertising design.</p>
+            </div>
+        </div>
+
+
+        <div class="work">
+            <img src="images/lynes-hair.jpg" alt="Lynes Hair Clinic banner">
+            <div class="work-info">
+                <h3>Beauty Business Branding</h3>
+                <p>Professional salon banner design.</p>
+            </div>
+        </div>
+
+
+        <div class="work">
+            <img src="images/banner-package.jpg" alt="Complete banner package">
+            <div class="work-info">
+                <h3>Complete Banner Package</h3>
+                <p>Design, print, frame, stand and installation.</p>
+            </div>
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
 
-<section id="order" class="contact">
+<!-- ORDER -->
 
-<div class="title">
+<section class="order" id="order">
 
-<h2>Place Your Order</h2>
+    <h2>Ready to Start Your Project?</h2>
 
-<p>
-Tell us what you need and let's get started.
-</p>
+    <p>
+        Tell us what you need and let's bring your vision to life.
+    </p>
 
-</div>
-
-<a class="btn primary"
-href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab,%20I%20would%20like%20to%20place%20an%20order.">
-
-START ORDER ON WHATSAPP
-
-</a>
+    <a class="btn"
+       href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab,%20I%20would%20like%20to%20make%20an%20order.">
+       ORDER ON WHATSAPP
+    </a>
 
 </section>
 
 
-<section id="contact" class="contact">
+<!-- CONTACT -->
 
-<div class="title">
+<section class="contact" id="contact">
 
-<h2>Contact Us</h2>
+    <h2 class="title">Contact Us</h2>
 
-</div>
+    <p class="subtitle">
+        We are ready to work with you.
+    </p>
 
-<p>
+    <div class="contact-box">
 
-📍 Thika, Kiganjo<br>
+        <p>
+            📞 <strong>Call / WhatsApp:</strong><br>
+            0758 560 246
+        </p>
 
-📱 0758560246<br>
+        <p>
+            📧 <strong>Email:</strong><br>
+            omwandhopeter89@gmail.com
+        </p>
 
-📧 omwandhopeter89@gmail.com
+        <p>
+            📍 <strong>Location:</strong><br>
+            Thika, Kiganjo
+        </p>
 
-</p>
-
-<br>
-
-
-<a class="btn secondary"
-href="mailto:omwandhopeter89@gmail.com">
-
-SEND EMAIL
-
-</a>
-
-
-<a class="btn primary"
-href="https://wa.me/254758560246">
-
-WHATSAPP
-
-</a>
+    </div>
 
 </section>
 
 
 <footer>
 
-© 2026 Omwandho Graphic & Auto Lab.
-All rights reserved.
+    <p>© 2026 Omwandho Graphic & Auto Lab</p>
+
+    <p>Design • Print • Transform</p>
 
 </footer>
 
