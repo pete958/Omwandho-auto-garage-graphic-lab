@@ -1,16 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Omwandho Graphic & Auto Lab | Design • Print • Brand • Paint</title>
+
+<meta name="description" content="Omwandho Graphic & Auto Lab in Thika, Kiganjo. Graphic design, printing, business branding and car painting. Chat with OMWANDHO AI or contact us on WhatsApp.">
+
+<meta name="theme-color" content="#0b0b0b">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --gold:#f5b900;
+    --gold2:#ffc928;
+    --black:#080808;
+    --dark:#111;
+    --dark2:#181818;
+    --dark3:#202020;
+    --white:#fff;
+    --gray:#aaa;
+    --green:#25D366;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--black);
+    color:var(--white);
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+header{
+    background:rgba(8,8,8,.96);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid #292929;
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:var(--gold);
+    letter-spacing:2px;
+}
+
+.logo span{
+    display:block;
+    color:#fff;
+    font-size:11px;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#ddd;
+    font-weight:bold;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:1px solid #444;
+    color:white;
+    font-size:23px;
+    padding:6px 11px;
+    border-radius:8px;
+}
+
+/* HERO */
+.hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 85% 20%,rgba(245,185,0,.16),transparent 30%),
+    radial-gradient(circle at 10% 80%,rgba(245,185,0,.06),transparent 30%),
+    linear-gradient(135deg,#080808,#191919);
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border:1px solid rgba(245,185,0,.12);
+    border-radius:50%;
+    right:-100px;
+    bottom:-100px;
+}
+
+.hero-content{
+    max-width:850px;
+    padding:85px 0;
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+    color:var(--gold);
+    border:1px solid var(--gold);
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(44px,7vw,78px);
+    line-height:1.02;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    color:#ccc;
+    font-size:19px;
+    max-width:760px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 23px;
+    border-radius:8px;
+    font-weight:900;
+    border:2px solid var(--gold);
+    transition:.3s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#111;
+}
+
+.btn-outline{
+    color:var(--gold);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* SECTIONS */
+section{
+    padding:85px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.section-title h2 span{
+    color:var(--gold);
+}
+
+.section-title p{
+    color:var(--gray);
+    max-width:700px;
+    margin:auto;
+}
+
+/* ABOUT */
+.about{
+    background:#111;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about h2 span{
+    color:var(--gold);
+}
+
+.about p{
+    color:#ccc;
+    margin-bottom:18px;
+}
+
+.about-box{
+    border:1px solid #333;
+    background:#181818;
+    padding:35px;
+    border-radius:15px;
+}
+
+.about-box h3{
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.about-list{
+    list-style:none;
+}
+
+.about-list li{
+    padding:10px 0;
+    border-bottom:1px solid #292929;
+}
+
+/* SERVICES */
+.services{
+    background:#0d0d0d;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:#171717;
+    border:1px solid #303030;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
+}
+
+.service-head{
+    padding:28px;
+    background:linear-gradient(135deg,#1d1d1d,#101010);
+}
+
+.service-number{
+    color:var(--gold);
+    font-weight:bold;
+    font-size:13px;
+}
+
+.service-head h3{
+    font-size:28px;
+    margin:8px 0;
+}
+
+.service-head p{
+    color:#bbb;
+}
+
+.subservices{
+    padding:20px 28px;
+}
+
+.subservice{
+    border-bottom:1px solid #303030;
+    padding:17px 0;
+}
+
+.subservice:last-child{
+    border-bottom:none;
+}
+
+.subservice h4{
+    color:white;
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.subservice p{
+    color:#aaa;
+    font-size:14px;
+}
+
+.order-small{
+    display:inline-block;
+    margin-top:9px;
+    color:var(--gold);
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* WHY */
+.why{
+    background:#151515;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature{
+    background:#1d1d1d;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:12px;
+    border:1px solid #303030;
+}
+
+.feature .icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.feature p{
+    color:#aaa;
+    font-size:14px;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    background:#0d0d0d;
+}
+
+.portfolio-note{
+    background:#181818;
+    border-left:4px solid var(--gold);
+    padding:20px;
+    margin-bottom:30px;
+    color:#ccc;
+    border-radius:6px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.portfolio-item{
+    background:#191919;
+    border:1px solid #333;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.portfolio-item img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+    background:#222;
+}
+
+.portfolio-caption{
+    padding:15px;
+}
+
+.portfolio-caption h3{
+    font-size:17px;
+}
+
+.portfolio-caption p{
+    color:#999;
+    font-size:13px;
+}
+
+/* HOW */
+.how{
+    background:#151515;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    text-align:center;
+    padding:30px 20px;
+    background:#1c1c1c;
+    border-radius:12px;
+}
+
+.step-number{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#111;
+    font-weight:900;
+    font-size:20px;
+}
+
+.step h3{
+    margin-bottom:10px;
+}
+
+.step p{
+    color:#aaa;
+    font-size:14px;
+}
+
+/* FAQ */
+.faq{
+    background:#0d0d0d;
+}
+
+.faq-list{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:#181818;
+    border:1px solid #303030;
+    margin-bottom:12px;
+    border-radius:8px;
+    padding:18px 20px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:white;
+}
+
+details p{
+    color:#aaa;
+    padding-top:12px;
+}
+
+/* CONTACT */
+.contact{
+    background:#151515;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-card{
+    background:#1c1c1c;
+    border:1px solid #303030;
+    padding:30px;
+    border-radius:14px;
+}
+
+.contact-card h3{
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.contact-item{
+    padding:15px 0;
+    border-bottom:1px solid #303030;
+}
+
+.contact-item:last-child{
+    border-bottom:none;
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+.contact-item a{
+    color:#ccc;
+}
+
+.contact-item a:hover{
+    color:var(--gold);
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(135deg,#171717,#090909);
+    text-align:center;
+}
+
+.cta h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.cta h2 span{
+    color:var(--gold);
+}
+
+.cta p{
+    color:#aaa;
+    max-width:700px;
+    margin:0 auto 30px;
+}
+
+/* FOOTER */
+footer{
+    background:#080808;
+    padding:45px 0 20px;
+    border-top:1px solid #292929;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+footer h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#999;
+    font-size:14px;
+}
+
+footer a:hover{
+    color:var(--gold);
+}
+
+.footer-bottom{
+    border-top:1px solid #252525;
+    padding-top:20px;
+    text-align:center;
+    color:#666;
+    font-size:13px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:998;
+    background:var(--green);
+    color:white;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+/* AI BUTTON */
+.ai-launcher{
+    position:fixed;
+    right:18px;
+    bottom:88px;
+    z-index:999;
+    width:62px;
+    height:62px;
+    border:none;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:#111;
+    font-size:27px;
+    cursor:pointer;
+    box-shadow:0 6px 25px rgba(0,0,0,.45);
+    transition:.3s;
+}
+
+.ai-launcher:hover{
+    transform:scale(1.08);
+}
+
+.ai-label{
+    position:fixed;
+    right:88px;
+    bottom:104px;
+    z-index:997;
+    background:#1c1c1c;
+    border:1px solid #333;
+    color:white;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+}
+
+/* AI CHAT */
+.ai-panel{
+    position:fixed;
+    right:18px;
+    bottom:160px;
+    width:min(390px,calc(100% - 30px));
+    height:560px;
+    max-height:calc(100vh - 180px);
+    background:#101010;
+    border:1px solid #383838;
+    border-radius:18px;
+    overflow:hidden;
+    z-index:1001;
+    box-shadow:0 15px 50px rgba(0,0,0,.65);
+    display:none;
+    flex-direction:column;
+}
+
+.ai-panel.open{
+    display:flex;
+    animation:aiOpen .25s ease;
+}
+
+@keyframes aiOpen{
+    from{
+        opacity:0;
+        transform:translateY(15px) scale(.98);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.ai-header{
+    background:linear-gradient(135deg,#1e1e1e,#0c0c0c);
+    padding:17px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #333;
+}
+
+.ai-brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.ai-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--gold);
+    color:#111;
+    font-weight:900;
+    font-size:20px;
+}
+
+.ai-title{
+    font-weight:900;
+}
+
+.ai-status{
+    color:#58d68d;
+    font-size:11px;
+}
+
+.ai-close{
+    background:none;
+    border:none;
+    color:#aaa;
+    font-size:25px;
+    cursor:pointer;
+}
+
+.ai-messages{
+    flex:1;
+    overflow-y:auto;
+    padding:17px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.ai-message{
+    max-width:86%;
+    padding:11px 13px;
+    border-radius:14px;
+    font-size:14px;
+    line-height:1.5;
+    white-space:pre-wrap;
+}
+
+.ai-message.bot{
+    align-self:flex-start;
+    background:#202020;
+    color:#eee;
+    border-bottom-left-radius:4px;
+}
+
+.ai-message.user{
+    align-self:flex-end;
+    background:var(--gold);
+    color:#111;
+    border-bottom-right-radius:4px;
+}
+
+.ai-quick{
+    padding:8px 12px;
+    display:flex;
+    gap:7px;
+    overflow-x:auto;
+    border-top:1px solid #292929;
+}
+
+.ai-quick button{
+    white-space:nowrap;
+    background:#202020;
+    border:1px solid #3a3a3a;
+    color:#ddd;
+    border-radius:20px;
+    padding:7px 10px;
+    font-size:11px;
+    cursor:pointer;
+}
+
+.ai-quick button:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+}
+
+.ai-input-area{
+    padding:11px;
+    border-top:1px solid #333;
+    display:flex;
+    gap:8px;
+    background:#151515;
+}
+
+.ai-input{
+    flex:1;
+    background:#222;
+    color:white;
+    border:1px solid #3a3a3a;
+    border-radius:22px;
+    padding:11px 14px;
+    outline:none;
+    resize:none;
+    min-height:42px;
+    max-height:100px;
+}
+
+.ai-input:focus{
+    border-color:var(--gold);
+}
+
+.ai-send{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:none;
+    background:var(--gold);
+    color:#111;
+    font-size:19px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.ai-send:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}
+
+.ai-typing{
+    align-self:flex-start;
+    background:#202020;
+    color:#aaa;
+    padding:9px 13px;
+    border-radius:14px;
+    font-size:13px;
+}
+
+.ai-whatsapp{
+    margin:0 12px 10px;
+    padding:10px;
+    border-radius:8px;
+    background:var(--green);
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    .navbar{
+        min-height:75px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:#0b0b0b;
+        padding:20px;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid #333;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .about-grid,
+    .contact-grid,
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    section{
+        padding:65px 0;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .features,
+    .steps,
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+        width:100%;
+    }
+
+    .portfolio-item img{
+        height:240px;
+    }
+
+    .ai-label{
+        display:none;
+    }
+
+    .ai-panel{
+        right:10px;
+        bottom:145px;
+        width:calc(100% - 20px);
+        height:530px;
+    }
+
+    .ai-launcher{
+        right:15px;
+        bottom:88px;
+    }
+
+    .whatsapp{
+        right:15px;
+        bottom:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<a href="#home" class="logo">
+OMWANDHO
+<span>GRAPHIC & AUTO LAB</span>
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+☰
+</button>
+
+<nav class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#how">How It Works</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="badge">
+THIKA • KIGANJO • KENYA
+</div>
+
+<h1>
+Design. Print.
+<span>Brand.</span>
+Paint.
+</h1>
+
+<p>
+Professional graphic design, printing, branding and automotive
+solutions for businesses, organizations and individuals.
+We turn ideas into professional work that stands out.
+</p>
+
+<div class="buttons">
+
+<a href="#services" class="btn btn-gold">
+EXPLORE SERVICES
+</a>
+
+<a href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab%2C%20I%20would%20like%20to%20make%20an%20order."
+class="btn btn-outline"
+target="_blank">
+WHATSAPP US
+</a>
+
+</div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+
+<h2>
+About <span>Omwandho</span>
+</h2>
+
+<p>
+Omwandho Graphic & Auto Lab is a creative and automotive
+service brand based in Thika, Kiganjo.
+</p>
+
+<p>
+We help businesses and individuals present themselves
+professionally through quality design, printing, branding
+and vehicle painting.
+</p>
+
+<p>
+Whether you need a simple poster, complete business branding
+or a vehicle transformed with professional paint work,
+our goal is simple:
+<strong>quality work that makes you proud.</strong>
+</p>
+
+<a href="#contact" class="btn btn-gold">
+CONTACT US
+</a>
+
+</div>
+
+<div class="about-box">
+
+<h3>What We Do</h3>
+
+<ul class="about-list">
+<li>✓ Professional Graphic Design</li>
+<li>✓ Printing & Large Format Printing</li>
+<li>✓ Business & Promotional Branding</li>
+<li>✓ Vehicle & Car Painting</li>
+<li>✓ Custom Creative Solutions</li>
+<li>✓ Design + Print + Branding Packages</li>
+</ul>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Our <span>Services</span>
+</h2>
+
+<p>
+Choose a service and tell us what you need.
+Our AI assistant can also help you get started.
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<div class="service-head">
+
+<div class="service-number">
+01 • CREATIVE
+</div>
+
+<h3>Graphic Design</h3>
+
+<p>
+Professional visual designs for businesses, events and personal projects.
+</p>
+
+</div>
+
+<div class="subservices">
+
+<div class="subservice">
+<h4>Logo Design</h4>
+<p>Unique logos for strong and memorable business identities.</p>
+<a class="order-small" href="#contact">Request Logo →</a>
+</div>
+
+<div class="subservice">
+<h4>Poster Design</h4>
+<p>Eye-catching posters for events, promotions and businesses.</p>
+<a class="order-small" href="#contact">Request Poster →</a>
+</div>
+
+<div class="subservice">
+<h4>Flyer Design</h4>
+<p>Professional flyers for products, services, offers and events.</p>
+<a class="order-small" href="#contact">Request Flyer →</a>
+</div>
+
+<div class="subservice">
+<h4>Business Card Design</h4>
+<p>Clean business cards that help customers remember your business.</p>
+<a class="order-small" href="#contact">Request Card →</a>
+</div>
+
+<div class="subservice">
+<h4>Menu Design</h4>
+<p>Attractive menus for hotels, restaurants, cafés and food businesses.</p>
+<a class="order-small" href="#contact">Request Menu →</a>
+</div>
+
+<div class="subservice">
+<h4>Social Media Designs</h4>
+<p>Promotional graphics for WhatsApp, Facebook, Instagram and TikTok.</p>
+<a class="order-small" href="#contact">Request Social Design →</a>
+</div>
+
+<div class="subservice">
+<h4>Invitation & Event Designs</h4>
+<p>Digital and printable invitations for special occasions.</p>
+<a class="order-small" href="#contact">Request Invitation →</a>
+</div>
+
+<div class="subservice">
+<h4>Certificate & Document Design</h4>
+<p>Professional certificates, forms and business documents.</p>
+<a class="order-small" href="#contact">Request Document →</a>
+</div>
+
+</div>
+</div>
+
+<div class="service-card">
+
+<div class="service-head">
+
+<div class="service-number">
+02 • PRODUCTION
+</div>
+
+<h3>Printing</h3>
+
+<p>
+Printing solutions for businesses, events, products and promotions.
+</p>
+
+</div>
+
+<div class="subservices">
+
+<div class="subservice">
+<h4>Banner Printing</h4>
+<p>Large-format banners for shops, events and outdoor advertising.</p>
+<a class="order-small" href="#contact">Order Banner →</a>
+</div>
+
+<div class="subservice">
+<h4>Poster Printing</h4>
+<p>Printed promotional and advertising posters in different sizes.</p>
+<a class="order-small" href="#contact">Order Posters →</a>
+</div>
+
+<div class="subservice">
+<h4>Business Card Printing</h4>
+<p>Professional printed business cards for individuals and businesses.</p>
+<a class="order-small" href="#contact">Order Cards →</a>
+</div>
+
+<div class="subservice">
+<h4>Sticker Printing</h4>
+<p>Custom stickers for products, bottles, packaging and promotions.</p>
+<a class="order-small" href="#contact">Order Stickers →</a>
+</div>
+
+<div class="subservice">
+<h4>Labels</h4>
+<p>Product and packaging labels for different business needs.</p>
+<a class="order-small" href="#contact">Order Labels →</a>
+</div>
+
+<div class="subservice">
+<h4>Menus & Flyers</h4>
+<p>Professional printed menus and flyers for marketing.</p>
+<a class="order-small" href="#contact">Order Printing →</a>
+</div>
+
+<div class="subservice">
+<h4>Large Format Printing</h4>
+<p>Large promotional graphics suitable for shops and events.</p>
+<a class="order-small" href="#contact">Get Quote →</a>
+</div>
+
+<div class="subservice">
+<h4>Custom Printing</h4>
+<p>Have something different? Tell us what you need.</p>
+<a class="order-small" href="#contact">Ask Us →</a>
+</div>
+
+</div>
+</div>
+
+<div class="service-card">
+
+<div class="service-head">
+
+<div class="service-number">
+03 • BUSINESS IDENTITY
+</div>
+
+<h3>Branding</h3>
+
+<p>
+Complete visual branding solutions for professional businesses.
+</p>
+
+</div>
+
+<div class="subservices">
+
+<div class="subservice">
+<h4>Shop Branding</h4>
+<p>Professional signs, graphics, colours and promotional materials.</p>
+<a class="order-small" href="#contact">Brand My Shop →</a>
+</div>
+
+<div class="subservice">
+<h4>Business Signage</h4>
+<p>Professional signs that help customers identify your business.</p>
+<a class="order-small" href="#contact">Request Signage →</a>
+</div>
+
+<div class="subservice">
+<h4>Vehicle Branding</h4>
+<p>Turn your vehicle into a moving advertisement.</p>
+<a class="order-small" href="#contact">Brand Vehicle →</a>
+</div>
+
+<div class="subservice">
+<h4>Banner + Frame + Stand</h4>
+<p>Complete banner solutions from design to display setup.</p>
+<a class="order-small" href="#contact">Get Package →</a>
+</div>
+
+<div class="subservice">
+<h4>Product Branding</h4>
+<p>Branding for bottles, packaging, containers and products.</p>
+<a class="order-small" href="#contact">Brand Products →</a>
+</div>
+
+<div class="subservice">
+<h4>Corporate Branding</h4>
+<p>Consistent visual materials for professional organizations.</p>
+<a class="order-small" href="#contact">Start Branding →</a>
+</div>
+
+<div class="subservice">
+<h4>Event Branding</h4>
+<p>Branding materials for launches, events and special occasions.</p>
+<a class="order-small" href="#contact">Brand Event →</a>
+</div>
+
+</div>
+</div>
+
+<div class="service-card">
+
+<div class="service-head">
+
+<div class="service-number">
+04 • AUTOMOTIVE
+</div>
+
+<h3>Car Painting</h3>
+
+<p>
+Vehicle paint and finishing solutions for automotive projects.
+</p>
+
+</div>
+
+<div class="subservices">
+
+<div class="subservice">
+<h4>Full Car Painting</h4>
+<p>Complete vehicle colour transformation with preparation and finishing.</p>
+<a class="order-small" href="#contact">Request Car Paint →</a>
+</div>
+
+<div class="subservice">
+<h4>Panel Painting</h4>
+<p>Painting individual vehicle panels after repair or damage.</p>
+<a class="order-small" href="#contact">Request Panel Work →</a>
+</div>
+
+<div class="subservice">
+<h4>Scratch & Damage Repair</h4>
+<p>Preparation and paint work for damaged areas and scratches.</p>
+<a class="order-small" href="#contact">Request Repair →</a>
+</div>
+
+<div class="subservice">
+<h4>Colour Change</h4>
+<p>Give your vehicle a completely different appearance.</p>
+<a class="order-small" href="#contact">Change Colour →</a>
+</div>
+
+<div class="subservice">
+<h4>Touch-Up Painting</h4>
+<p>Small paint corrections for selected areas.</p>
+<a class="order-small" href="#contact">Request Touch-Up →</a>
+</div>
+
+<div class="subservice">
+<h4>Custom Automotive Finishing</h4>
+<p>Discuss your desired vehicle appearance with the team.</p>
+<a class="order-small" href="#contact">Discuss Project →</a>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Why Choose <span>Omwandho?</span>
+</h2>
+
+<p>
+We focus on quality, creativity and practical solutions.
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+<div class="icon">🎨</div>
+<h3>Creative</h3>
+<p>Designs made to attract attention and communicate clearly.</p>
+</div>
+
+<div class="feature">
+<div class="icon">🖨️</div>
+<h3>Quality</h3>
+<p>We focus on clean and professional work.</p>
+</div>
+
+<div class="feature">
+<div class="icon">⚡</div>
+<h3>Reliable</h3>
+<p>We communicate with customers throughout the project.</p>
+</div>
+
+<div class="feature">
+<div class="icon">🤝</div>
+<h3>Customer First</h3>
+<p>Your idea matters. We work with you toward the desired result.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="portfolio" id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Our <span>Portfolio</span>
+</h2>
+
+<p>
+A selection of design, printing and branding work.
+</p>
+
+</div>
+
+<div class="portfolio-note">
+
+<strong>REAL WORK:</strong>
+These are your actual project photos. Add more images to
+your GitHub repository whenever you complete new projects.
+
+</div>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-item">
+<img src="20250710_164755.jpg" alt="Omwandho graphic design project">
+<div class="portfolio-caption">
+<h3>Graphic Design</h3>
+<p>Professional promotional design.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="20250710_164802.jpg" alt="Omwandho business design project">
+<div class="portfolio-caption">
+<h3>Business Design</h3>
+<p>Creative business promotional material.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260618_152233.jpg" alt="Omwandho printing project">
+<div class="portfolio-caption">
+<h3>Printing Project</h3>
+<p>Printed customer project.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260618_163751_HD.jpg" alt="Omwandho branding project">
+<div class="portfolio-caption">
+<h3>Branding Project</h3>
+<p>Business branding work.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260623_173205_HD.jpg" alt="Omwandho print branding project">
+<div class="portfolio-caption">
+<h3>Print & Branding</h3>
+<p>Professional production work.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260624_143635.jpg" alt="Omwandho customer project">
+<div class="portfolio-caption">
+<h3>Customer Project</h3>
+<p>Completed project.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260624_183322_HD.jpg" alt="Omwandho large format project">
+<div class="portfolio-caption">
+<h3>Large Format Work</h3>
+<p>Professional printing project.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260626_192049_HD.jpg" alt="Omwandho branding work">
+<div class="portfolio-caption">
+<h3>Branding Work</h3>
+<p>Customer branding project.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260701_090034_HD.jpg" alt="Omwandho graphic project">
+<div class="portfolio-caption">
+<h3>Graphic Project</h3>
+<p>Creative design work.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260701_091332_HD.jpg" alt="Omwandho printing work">
+<div class="portfolio-caption">
+<h3>Printing Work</h3>
+<p>Quality printed material.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260701_092340_HD.jpg" alt="Omwandho business branding">
+<div class="portfolio-caption">
+<h3>Business Branding</h3>
+<p>Professional customer project.</p>
+</div>
+</div>
+
+<div class="portfolio-item">
+<img src="IMG_20260701_153241.jpg" alt="Omwandho creative project">
+<div class="portfolio-caption">
+<h3>Creative Work</h3>
+<p>Completed customer project.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="how" id="how">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+How It <span>Works</span>
+</h2>
+
+<p>
+Getting your project started is simple.
+</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Contact Us</h3>
+<p>Call or WhatsApp and explain what you need.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Share Details</h3>
+<p>Send information, measurements, photos or ideas.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Get a Quote</h3>
+<p>Discuss the work, price and project requirements.</p>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>We Deliver</h3>
+<p>Your project is completed professionally.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="faq" id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Frequently Asked <span>Questions</span>
+</h2>
+
+</div>
+
+<div class="faq-list">
+
+<details>
+<summary>Where are you located?</summary>
+<p>We are based in Thika, Kiganjo, Kenya.</p>
+</details>
+
+<details>
+<summary>Can I order through WhatsApp?</summary>
+<p>Yes. WhatsApp is one of the easiest ways to send your requirements, photos and ideas.</p>
+</details>
+
+<details>
+<summary>Do you design before printing?</summary>
+<p>Yes. We can handle design and printing depending on your project.</p>
+</details>
+
+<details>
+<summary>Can I bring my own design?</summary>
+<p>Yes. You can send your existing design for printing or discuss other production requirements.</p>
+</details>
+
+<details>
+<summary>Do you offer banner packages?</summary>
+<p>Yes. Depending on your requirements, design, printing, frame and stand can be arranged.</p>
+</details>
+
+<details>
+<summary>Can you work with customers outside Thika?</summary>
+<p>Yes. Contact us and we can discuss your location and project requirements.</p>
+</details>
+
+<details>
+<summary>How do I request a price?</summary>
+<p>Send your project details through WhatsApp, phone or email for quotation guidance.</p>
+</details>
+
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Let's Start Your <span>Project</span>
+</h2>
+
+<p>
+Tell us what you need and let's bring your idea to life.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Contact Details</h3>
+
+<div class="contact-item">
+<strong>📞 Call / WhatsApp</strong>
+<a href="tel:+254758560246">0758 560 246</a>
+</div>
+
+<div class="contact-item">
+<strong>📧 Email</strong>
+<a href="mailto:omwandhopeter89@gmail.com">
+omwandhopeter89@gmail.com
+</a>
+</div>
+
+<div class="contact-item">
+<strong>📍 Location</strong>
+<span>Thika, Kiganjo, Kenya</span>
+</div>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Ready to Order?</h3>
+
+<p style="color:#aaa;margin-bottom:25px;">
+Send your service requirements, photos, measurements or ideas.
+You can also ask OMWANDHO AI for help before contacting us.
+</p>
+
+<a class="btn btn-gold"
+href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab.%20I%20would%20like%20to%20request%20a%20service.%20My%20project%20is%3A"
+target="_blank">
+START ON WHATSAPP
+</a>
+
+<br><br>
+
+<a class="btn btn-outline" href="tel:+254758560246">
+CALL NOW
+</a>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Have an <span>Idea?</span>
+</h2>
+
+<p>
+Don't worry if you don't know exactly what you need.
+Tell us your idea and our team can help you choose a suitable solution.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<button class="btn btn-gold" onclick="openAI()">
+🤖 ASK OMWANDHO AI
+</button>
+
+<a href="#portfolio" class="btn btn-outline">
+VIEW OUR WORK
+</a>
+
+</div>
+</div>
+</section>
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>OMWANDHO</h3>
+
+<p>Graphic & Auto Lab</p>
+
+<p style="margin-top:10px;">
+Design • Print • Brand • Paint
+</p>
+
+<p style="margin-top:10px;">
+Thika, Kiganjo, Kenya
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p><a href="#home">Home</a></p>
+<p><a href="#about">About</a></p>
+<p><a href="#services">Services</a></p>
+<p><a href="#portfolio">Portfolio</a></p>
+<p><a href="#contact">Contact</a></p>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>
+<a href="tel:+254758560246">
+0758 560 246
+</a>
+</p>
+
+<p>
+<a href="mailto:omwandhopeter89@gmail.com">
+Email Us
+</a>
+</p>
+
+<p>
+<a href="https://wa.me/254758560246" target="_blank">
+WhatsApp
+</a>
+</p>
+
+</div>
+</div>
+
+<div class="footer-bottom">
+
+© <span id="year"></span>
+Omwandho Graphic & Auto Lab.
+All Rights Reserved.
+
+</div>
+</div>
+</footer>
+
+<div class="ai-label" id="aiLabel">
+🤖 Ask OMWANDHO AI
+</div>
+
+<button
+class="ai-launcher"
+id="aiLauncher"
+onclick="toggleAI()"
+aria-label="Open OMWANDHO AI">
+🤖
+</button>
+
+<div class="ai-panel" id="aiPanel">
+
+<div class="ai-header">
+
+<div class="ai-brand">
+
+<div class="ai-avatar">
+AI
+</div>
+
+<div>
+
+<div class="ai-title">
+OMWANDHO AI
+</div>
+
+<div class="ai-status">
+● Online Assistant
+</div>
+
+</div>
+</div>
+
+<button
+class="ai-close"
+onclick="closeAI()"
+aria-label="Close AI">
+×
+</button>
+
+</div>
+
+<div class="ai-messages" id="aiMessages">
+
+<div class="ai-message bot">
+Hello 👋 Welcome to Omwandho Graphic & Auto Lab.
+
+I can help you with:
+
+🎨 Graphic Design
+🖨️ Printing
+🏪 Business Branding
+🚗 Car Painting
+
+What would you like help with today?
+</div>
+
+</div>
+
+<div class="ai-quick">
+
+<button onclick="quickAsk('I need a banner')">
+🎨 Banner
+</button>
+
+<button onclick="quickAsk('I need a logo')">
+🖌️ Logo
+</button>
+
+<button onclick="quickAsk('I need printing')">
+🖨️ Printing
+</button>
+
+<button onclick="quickAsk('I need car painting')">
+🚗 Car Paint
+</button>
+
+<button onclick="quickAsk('I need business branding')">
+🏪 Branding
+</button>
+
+</div>
+
+<a
+class="ai-whatsapp"
+href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab%2C%20I%20would%20like%20to%20make%20an%20order."
+target="_blank">
+💬 Continue on WhatsApp
+</a>
+
+<div class="ai-input-area">
+
+<textarea
+id="aiInput"
+class="ai-input"
+placeholder="Ask OMWANDHO AI..."
+rows="1"
+onkeydown="handleAIKey(event)"></textarea>
+
+<button
+id="aiSend"
+class="ai-send"
+onclick="sendAIMessage()">
+➤
+</button>
+
+</div>
+</div>
+
+<a
+class="whatsapp"
+href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab%2C%20I%20need%20your%20services."
+target="_blank"
+aria-label="WhatsApp">
+☏
+</a>
+
 <script>
 
 /* =====================================================
-   OMWANDHO AI — CLOUDFLARE CHAT CONNECTION
+   OMWANDHO AI
+   IMPORTANT: /chat IS INCLUDED
    ===================================================== */
 
 const AI_WORKER_URL =
-"https://omwandhoai.omwandhopeter89.workers.dev/chat";
+"https://omwandhopeterai.omwandhopeter89.workers.dev/chat";
 
 
-/* =====================================================
-   MOBILE MENU
-   ===================================================== */
+/* MOBILE MENU */
 
 function toggleMenu(){
 
@@ -20,7 +1942,6 @@ function toggleMenu(){
     .toggle("active");
 
 }
-
 
 document
 .querySelectorAll(".nav-links a")
@@ -38,9 +1959,7 @@ document
 });
 
 
-/* =====================================================
-   YEAR
-   ===================================================== */
+/* YEAR */
 
 document
 .getElementById("year")
@@ -48,9 +1967,7 @@ document
 new Date().getFullYear();
 
 
-/* =====================================================
-   AI OPEN / CLOSE
-   ===================================================== */
+/* AI OPEN */
 
 function openAI(){
 
@@ -75,6 +1992,8 @@ function openAI(){
 }
 
 
+/* AI CLOSE */
+
 function closeAI(){
 
     document
@@ -89,6 +2008,8 @@ function closeAI(){
 
 }
 
+
+/* TOGGLE AI */
 
 function toggleAI(){
 
@@ -108,9 +2029,7 @@ function toggleAI(){
 }
 
 
-/* =====================================================
-   QUICK QUESTIONS
-   ===================================================== */
+/* QUICK QUESTIONS */
 
 function quickAsk(text){
 
@@ -123,9 +2042,7 @@ function quickAsk(text){
 }
 
 
-/* =====================================================
-   ENTER KEY
-   ===================================================== */
+/* ENTER */
 
 function handleAIKey(event){
 
@@ -140,9 +2057,7 @@ function handleAIKey(event){
 }
 
 
-/* =====================================================
-   ADD MESSAGE
-   ===================================================== */
+/* ADD MESSAGE */
 
 function addAIMessage(text,type){
 
@@ -166,9 +2081,7 @@ function addAIMessage(text,type){
 }
 
 
-/* =====================================================
-   TYPING INDICATOR
-   ===================================================== */
+/* TYPING */
 
 function showTyping(){
 
@@ -182,12 +2095,12 @@ function showTyping(){
 
     typing.className="ai-typing";
 
-    typing.textContent =
+    typing.textContent=
     "OMWANDHO AI is typing...";
 
     container.appendChild(typing);
 
-    container.scrollTop =
+    container.scrollTop=
     container.scrollHeight;
 
 }
@@ -208,7 +2121,7 @@ function removeTyping(){
 
 
 /* =====================================================
-   SEND MESSAGE TO CLOUDFLARE /chat
+   SEND TO CLOUDFLARE /chat
    ===================================================== */
 
 async function sendAIMessage(){
@@ -230,13 +2143,10 @@ async function sendAIMessage(){
     }
 
 
-    /* Show customer's message */
-
     addAIMessage(
         message,
         "user"
     );
-
 
     input.value="";
 
@@ -255,8 +2165,6 @@ async function sendAIMessage(){
 
                 headers:{
                     "Content-Type":
-                    "application/json",
-                    "Accept":
                     "application/json"
                 },
 
@@ -268,89 +2176,82 @@ async function sendAIMessage(){
         );
 
 
-        /* Check HTTP response */
+        /*
+        Check HTTP response first.
+        */
 
         if(!response.ok){
 
             throw new Error(
-                "Server returned HTTP " +
+                "HTTP error " +
                 response.status
             );
 
         }
 
 
+        /*
+        Read the Worker response.
+        */
+
         const data =
         await response.json();
+
+        console.log(
+            "OMWANDHO AI response:",
+            data
+        );
 
 
         removeTyping();
 
 
-        /* =================================================
-           ACCEPT NORMAL AI RESPONSE
-           ================================================= */
+        /*
+        Accept different response names
+        so the website is not dependent
+        on only one JSON field.
+        */
 
-        if(
-            data &&
-            data.success &&
-            data.reply
-        ){
+        let reply = "";
 
-            addAIMessage(
-                data.reply,
-                "bot"
-            );
+        if(data){
 
-        }
+            if(typeof data.reply === "string"){
 
-        /* =================================================
-           HANDLE RESPONSE IF REPLY EXISTS WITHOUT SUCCESS
-           ================================================= */
+                reply = data.reply;
 
-        else if(
-            data &&
-            data.reply
-        ){
+            }else if(typeof data.message === "string"){
 
-            addAIMessage(
-                data.reply,
-                "bot"
-            );
+                reply = data.message;
 
-        }
+            }else if(typeof data.response === "string"){
 
-        /* =================================================
-           HANDLE ERROR FROM SERVER
-           ================================================= */
+                reply = data.response;
 
-        else if(
-            data &&
-            data.error
-        ){
+            }else if(
+                data.data &&
+                typeof data.data.reply === "string"
+            ){
 
-            addAIMessage(
-                "Sorry, OMWANDHO AI could not process that request right now. Please try again.",
-                "bot"
-            );
+                reply = data.data.reply;
 
-            console.error(
-                "OMWANDHO AI server error:",
-                data.error
-            );
+            }
 
         }
 
-        else{
+
+        if(reply){
 
             addAIMessage(
-                "Sorry, I couldn't respond right now. Please try again or continue with us on WhatsApp.",
+                reply,
                 "bot"
             );
 
-            console.error(
-                "Unexpected AI response:",
-                data
+        }else{
+
+            addAIMessage(
+                "I received a response from the AI service, but I could not read the reply. Please try again or continue with us on WhatsApp.",
+                "bot"
             );
 
         }
@@ -368,7 +2269,7 @@ async function sendAIMessage(){
 
 
         addAIMessage(
-            "I'm having trouble connecting right now. Please try again in a moment or continue with us on WhatsApp.",
+            "OMWANDHO AI could not connect to the chat service right now. Please try again in a moment or continue with us on WhatsApp.",
             "bot"
         );
 
@@ -381,9 +2282,7 @@ async function sendAIMessage(){
 
 }
 
-
-/* =====================================================
-   DO NOT AUTO-OPEN AI
-   ===================================================== */
-
 </script>
+
+</body>
+</html>
