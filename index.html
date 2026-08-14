@@ -7,6 +7,7 @@
 <title>Omwandho Graphic & Auto Lab | Design • Print • Brand • Paint</title>
 
 <meta name="description" content="Omwandho Graphic & Auto Lab in Thika, Kiganjo. Graphic design, printing, business branding and car painting. Chat with OMWANDHO AI or contact us on WhatsApp.">
+
 <meta name="theme-color" content="#0b0b0b">
 
 <style>
@@ -188,7 +189,6 @@ header{
     font-weight:900;
     border:2px solid var(--gold);
     transition:.3s;
-    cursor:pointer;
 }
 
 .btn-gold{
@@ -198,7 +198,6 @@ header{
 
 .btn-outline{
     color:var(--gold);
-    background:transparent;
 }
 
 .btn:hover{
@@ -729,7 +728,6 @@ footer a:hover{
         opacity:0;
         transform:translateY(15px) scale(.98);
     }
-
     to{
         opacity:1;
         transform:translateY(0) scale(1);
@@ -797,6 +795,7 @@ footer a:hover{
     font-size:14px;
     line-height:1.5;
     white-space:pre-wrap;
+    overflow-wrap:anywhere;
 }
 
 .ai-message.bot{
@@ -872,6 +871,7 @@ footer a:hover{
     font-size:19px;
     cursor:pointer;
     font-weight:bold;
+    flex-shrink:0;
 }
 
 .ai-send:disabled{
@@ -1032,7 +1032,9 @@ OMWANDHO
 <span>GRAPHIC & AUTO LAB</span>
 </a>
 
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+<button class="menu-btn"
+onclick="toggleMenu()"
+aria-label="Open menu">
 ☰
 </button>
 
@@ -1810,6 +1812,7 @@ CALL NOW
 </a>
 
 </div>
+
 </div>
 </div>
 </section>
@@ -1924,17 +1927,12 @@ All Rights Reserved.
 
 
 <!-- =========================
-     AI LABEL
+     AI FLOATING BUTTON
 ========================= -->
 
 <div class="ai-label" id="aiLabel">
 🤖 Ask OMWANDHO AI
 </div>
-
-
-<!-- =========================
-     AI LAUNCHER
-========================= -->
 
 <button
 class="ai-launcher"
@@ -1988,16 +1986,12 @@ aria-label="Close AI">
 <div class="ai-message bot">
 Hello 👋 Welcome to Omwandho Graphic & Auto Lab.
 
-I am OMWANDHO AI, your official assistant.
-
 I can help you with:
 
 🎨 Graphic Design
 🖨️ Printing
 🏪 Business Branding
 🚗 Car Painting
-🚘 Vehicle Branding
-🔧 Panel Beating
 
 What would you like help with today?
 </div>
@@ -2060,7 +2054,7 @@ onclick="sendAIMessage()">
 
 
 <!-- =========================
-     FLOATING WHATSAPP
+     WHATSAPP FLOATING BUTTON
 ========================= -->
 
 <a
@@ -2075,28 +2069,35 @@ aria-label="WhatsApp">
 <script>
 
 /* =========================================================
-   OMWANDHO AI CONFIGURATION
-   =========================================================
+   OMWANDHO GRAPHIC & AUTO LAB
+   WEBSITE + OMWANDHO AI
+   ========================================================= */
 
-   THIS IS THE WORKING CLOUDFLARE /chat ENDPOINT.
 
-   Do not change this URL unless the Worker endpoint changes.
-========================================================= */
+/* =========================================================
+   CLOUDFLARE AI CHAT ENDPOINT
+
+   Your working Cloudflare endpoint is:
+
+   https://omwandhopeterai.omwandhopeter89.workers.dev/chat
+
+   DO NOT add /chat again anywhere else.
+   ========================================================= */
 
 const AI_WORKER_URL =
-"https://omwandhoai.omwandhopeter89.workers.dev/chat";
+"https://omwandhopeterai.omwandhopeter89.workers.dev/chat";
 
 
 /* =========================================================
    MOBILE MENU
-========================================================= */
+   ========================================================= */
 
 function toggleMenu(){
 
-    document
-    .getElementById("navLinks")
-    .classList
-    .toggle("active");
+    const nav =
+    document.getElementById("navLinks");
+
+    nav.classList.toggle("active");
 
 }
 
@@ -2119,7 +2120,7 @@ document
 
 /* =========================================================
    CURRENT YEAR
-========================================================= */
+   ========================================================= */
 
 document
 .getElementById("year")
@@ -2129,25 +2130,28 @@ new Date().getFullYear();
 
 /* =========================================================
    OPEN AI
-========================================================= */
+   ========================================================= */
 
 function openAI(){
 
     const panel =
     document.getElementById("aiPanel");
 
+    const label =
+    document.getElementById("aiLabel");
+
     panel.classList.add("open");
 
-    document
-    .getElementById("aiLabel")
-    .style
-    .display="none";
+    label.style.display="none";
 
     setTimeout(function(){
 
-        document
-        .getElementById("aiInput")
-        .focus();
+        const input =
+        document.getElementById("aiInput");
+
+        if(input){
+            input.focus();
+        }
 
     },200);
 
@@ -2156,26 +2160,26 @@ function openAI(){
 
 /* =========================================================
    CLOSE AI
-========================================================= */
+   ========================================================= */
 
 function closeAI(){
 
-    document
-    .getElementById("aiPanel")
-    .classList
-    .remove("open");
+    const panel =
+    document.getElementById("aiPanel");
 
-    document
-    .getElementById("aiLabel")
-    .style
-    .display="block";
+    const label =
+    document.getElementById("aiLabel");
+
+    panel.classList.remove("open");
+
+    label.style.display="block";
 
 }
 
 
 /* =========================================================
    TOGGLE AI
-========================================================= */
+   ========================================================= */
 
 function toggleAI(){
 
@@ -2197,13 +2201,14 @@ function toggleAI(){
 
 /* =========================================================
    QUICK QUESTIONS
-========================================================= */
+   ========================================================= */
 
 function quickAsk(text){
 
-    document
-    .getElementById("aiInput")
-    .value=text;
+    const input =
+    document.getElementById("aiInput");
+
+    input.value=text;
 
     sendAIMessage();
 
@@ -2212,11 +2217,14 @@ function quickAsk(text){
 
 /* =========================================================
    ENTER KEY
-========================================================= */
+   ========================================================= */
 
 function handleAIKey(event){
 
-    if(event.key==="Enter" && !event.shiftKey){
+    if(
+        event.key === "Enter" &&
+        !event.shiftKey
+    ){
 
         event.preventDefault();
 
@@ -2228,8 +2236,8 @@ function handleAIKey(event){
 
 
 /* =========================================================
-   ADD MESSAGE
-========================================================= */
+   ADD CHAT MESSAGE
+   ========================================================= */
 
 function addAIMessage(text,type){
 
@@ -2243,7 +2251,7 @@ function addAIMessage(text,type){
     "ai-message " + type;
 
     message.textContent =
-    text;
+    String(text);
 
     container.appendChild(message);
 
@@ -2254,13 +2262,15 @@ function addAIMessage(text,type){
 
 
 /* =========================================================
-   TYPING INDICATOR
-========================================================= */
+   SHOW TYPING
+   ========================================================= */
 
 function showTyping(){
 
     const container =
     document.getElementById("aiMessages");
+
+    removeTyping();
 
     const typing =
     document.createElement("div");
@@ -2269,16 +2279,20 @@ function showTyping(){
 
     typing.className="ai-typing";
 
-    typing.textContent =
+    typing.textContent=
     "OMWANDHO AI is typing...";
 
     container.appendChild(typing);
 
-    container.scrollTop =
+    container.scrollTop=
     container.scrollHeight;
 
 }
 
+
+/* =========================================================
+   REMOVE TYPING
+   ========================================================= */
 
 function removeTyping(){
 
@@ -2286,17 +2300,99 @@ function removeTyping(){
     document.getElementById("aiTyping");
 
     if(typing){
-
         typing.remove();
-
     }
 
 }
 
 
 /* =========================================================
-   SEND MESSAGE TO CLOUDFLARE /chat
-========================================================= */
+   GET AI REPLY
+   ========================================================= */
+
+function extractAIReply(data){
+
+    if(!data){
+        return "";
+    }
+
+
+    /* Your current Cloudflare response */
+
+    if(
+        typeof data.reply === "string" &&
+        data.reply.trim()
+    ){
+
+        return data.reply.trim();
+
+    }
+
+
+    /* Other possible response formats */
+
+    if(
+        typeof data.message === "string" &&
+        data.message.trim()
+    ){
+
+        return data.message.trim();
+
+    }
+
+
+    if(
+        typeof data.response === "string" &&
+        data.response.trim()
+    ){
+
+        return data.response.trim();
+
+    }
+
+
+    if(
+        data.data &&
+        typeof data.data.reply === "string" &&
+        data.data.reply.trim()
+    ){
+
+        return data.data.reply.trim();
+
+    }
+
+
+    if(
+        data.result &&
+        typeof data.result.reply === "string" &&
+        data.result.reply.trim()
+    ){
+
+        return data.result.reply.trim();
+
+    }
+
+
+    return "";
+
+}
+
+
+/* =========================================================
+   SEND MESSAGE TO CLOUDFLARE
+
+   IMPORTANT:
+
+   POST
+   Content-Type: application/json
+
+   Body:
+   {
+       "message":"user question"
+   }
+
+   This matches the Cloudflare endpoint you tested.
+   ========================================================= */
 
 async function sendAIMessage(){
 
@@ -2306,14 +2402,18 @@ async function sendAIMessage(){
     const sendButton =
     document.getElementById("aiSend");
 
+
+    if(!input || !sendButton){
+        return;
+    }
+
+
     const message =
     input.value.trim();
 
 
     if(!message){
-
         return;
-
     }
 
 
@@ -2325,9 +2425,17 @@ async function sendAIMessage(){
     );
 
 
+    /* Clear input */
+
     input.value="";
 
+
+    /* Disable send button */
+
     sendButton.disabled=true;
+
+
+    /* Show typing */
 
     showTyping();
 
@@ -2335,7 +2443,7 @@ async function sendAIMessage(){
     try{
 
         /*
-         * Send POST request to Cloudflare.
+         * Send request to Cloudflare Worker.
          */
 
         const response =
@@ -2345,12 +2453,10 @@ async function sendAIMessage(){
                 method:"POST",
 
                 headers:{
-                    "Content-Type":
-                    "application/json"
+                    "Content-Type":"application/json"
                 },
 
-                body:
-                JSON.stringify({
+                body:JSON.stringify({
                     message:message
                 })
             }
@@ -2358,84 +2464,107 @@ async function sendAIMessage(){
 
 
         /*
-         * Check HTTP status.
+         * Get response as text first.
+         *
+         * This makes the website safer if
+         * Cloudflare ever returns an unexpected
+         * response.
+         */
+
+        const rawText =
+        await response.text();
+
+
+        console.log(
+            "OMWANDHO AI HTTP status:",
+            response.status
+        );
+
+        console.log(
+            "OMWANDHO AI raw response:",
+            rawText
+        );
+
+
+        /*
+         * HTTP error.
          */
 
         if(!response.ok){
 
             throw new Error(
-                "HTTP " +
-                response.status
+                "Cloudflare returned HTTP " +
+                response.status +
+                ": " +
+                rawText
             );
 
         }
 
 
         /*
-         * Read JSON returned by Worker.
+         * Convert JSON response.
          */
 
-        const data =
-        await response.json();
+        let data;
+
+        try{
+
+            data =
+            JSON.parse(rawText);
+
+        }catch(jsonError){
+
+            throw new Error(
+                "The AI server did not return valid JSON."
+            );
+
+        }
 
 
         console.log(
-            "OMWANDHO AI response:",
+            "OMWANDHO AI JSON:",
             data
         );
 
+
+        /*
+         * Remove typing indicator.
+         */
 
         removeTyping();
 
 
         /*
-         * Your confirmed Worker response is:
-         *
-         * {
-         *   "success": true,
-         *   "assistant": "OMWANDHO AI",
-         *   "reply": "..."
-         * }
+         * Find the AI reply.
          */
 
-        if(
-            data &&
-            data.success === true &&
-            typeof data.reply === "string"
-        ){
+        const reply =
+        extractAIReply(data);
+
+
+        /*
+         * Display reply.
+         */
+
+        if(reply){
 
             addAIMessage(
-                data.reply,
+                reply,
                 "bot"
             );
 
-        }
-
-        else if(
-            data &&
-            typeof data.reply === "string"
-        ){
+        }else{
 
             addAIMessage(
-                data.reply,
-                "bot"
-            );
-
-        }
-
-        else{
-
-            addAIMessage(
-                "Sorry, I could not read the AI response. Please try again or continue with us on WhatsApp.",
+                "The AI service responded, but no reply was found. Please try again.",
                 "bot"
             );
 
         }
 
 
-    }
-
-    catch(error){
+    }catch(error){
 
         console.error(
             "OMWANDHO AI ERROR:",
@@ -2446,19 +2575,65 @@ async function sendAIMessage(){
         removeTyping();
 
 
+        /*
+         * User-friendly error.
+         */
+
         addAIMessage(
-            "I'm having trouble connecting to OMWANDHO AI right now. Please try again in a moment or continue with us on WhatsApp.",
+            "OMWANDHO AI could not connect to the chat service right now. Please try again in a moment or continue with us on WhatsApp.",
             "bot"
         );
 
     }
 
 
+    /*
+     * Re-enable button.
+     */
+
     sendButton.disabled=false;
+
+
+    /*
+     * Put cursor back into input.
+     */
 
     input.focus();
 
 }
+
+
+/* =========================================================
+   AUTO-RESIZE TEXTAREA
+   ========================================================= */
+
+const aiInput =
+document.getElementById("aiInput");
+
+
+if(aiInput){
+
+    aiInput.addEventListener(
+        "input",
+        function(){
+
+            this.style.height="auto";
+
+            this.style.height =
+            Math.min(
+                this.scrollHeight,
+                100
+            ) + "px";
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   END OMWANDHO AI
+   ========================================================= */
 
 </script>
 
