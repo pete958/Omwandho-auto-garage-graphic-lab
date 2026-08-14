@@ -11,6 +11,7 @@
 <meta name="theme-color" content="#0b0b0b">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -110,6 +111,7 @@ header{
     font-size:23px;
     padding:6px 11px;
     border-radius:8px;
+    cursor:pointer;
 }
 
 /* ================= HERO ================= */
@@ -120,6 +122,7 @@ header{
     align-items:center;
     position:relative;
     overflow:hidden;
+
     background:
     radial-gradient(circle at 85% 20%,rgba(245,185,0,.16),transparent 30%),
     radial-gradient(circle at 10% 80%,rgba(245,185,0,.06),transparent 30%),
@@ -185,6 +188,7 @@ header{
     font-weight:900;
     border:2px solid var(--gold);
     transition:.3s;
+    cursor:pointer;
 }
 
 .btn-gold{
@@ -981,6 +985,7 @@ footer a:hover{
         bottom:18px;
     }
 }
+
 </style>
 </head>
 
@@ -989,6 +994,7 @@ footer a:hover{
 <!-- ================= HEADER ================= -->
 
 <header>
+
 <div class="container navbar">
 
 <a href="#home" class="logo">
@@ -996,11 +1002,15 @@ OMWANDHO
 <span>GRAPHIC & AUTO LAB</span>
 </a>
 
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+<button
+class="menu-btn"
+onclick="toggleMenu()"
+aria-label="Open menu">
 ☰
 </button>
 
 <nav class="nav-links" id="navLinks">
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -1008,9 +1018,11 @@ OMWANDHO
 <a href="#how">How It Works</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </div>
+
 </header>
 
 
@@ -1042,7 +1054,10 @@ We turn ideas into professional work that stands out.
 EXPLORE SERVICES
 </a>
 
-<a href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab%2C%20I%20would%20like%20to%20make%20an%20order." class="btn btn-outline">
+<a
+href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab%2C%20I%20would%20like%20to%20make%20an%20order."
+target="_blank"
+class="btn btn-outline">
 WHATSAPP US
 </a>
 
@@ -1757,7 +1772,9 @@ Send your service requirements, photos, measurements or ideas.
 You can also ask OMWANDHO AI for help before contacting us.
 </p>
 
-<a class="btn btn-gold"
+<a
+class="btn btn-gold"
+target="_blank"
 href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab.%20I%20would%20like%20to%20request%20a%20service.%20My%20project%20is%3A">
 START ON WHATSAPP
 </a>
@@ -1864,7 +1881,9 @@ Email Us
 </p>
 
 <p>
-<a href="https://wa.me/254758560246">
+<a
+href="https://wa.me/254758560246"
+target="_blank">
 WhatsApp
 </a>
 </p>
@@ -1944,7 +1963,7 @@ aria-label="Close AI">
 
 <div class="ai-message bot">
 
-Hello 👋 Welcome to <strong>Omwandho Graphic & Auto Lab</strong>.
+Hello 👋 Welcome to Omwandho Graphic & Auto Lab.
 
 I can help you with:
 
@@ -2030,10 +2049,11 @@ aria-label="WhatsApp">
 
 /* =====================================================
    OMWANDHO AI CONNECTION
+   IMPORTANT: /chat endpoint
    ===================================================== */
 
 const AI_WORKER_URL =
-"https://omwandhoai.omwandhopeter89.workers.dev/";
+"https://omwandhoai.omwandhopeter89.workers.dev/chat";
 
 
 /* =====================================================
@@ -2292,6 +2312,18 @@ async function sendAIMessage(){
         );
 
 
+        /* Check HTTP response */
+
+        if(!response.ok){
+
+            throw new Error(
+                "HTTP error " +
+                response.status
+            );
+
+        }
+
+
         const data =
         await response.json();
 
@@ -2323,7 +2355,7 @@ async function sendAIMessage(){
     }catch(error){
 
         console.error(
-            "AI connection error:",
+            "OMWANDHO AI connection error:",
             error
         );
 
@@ -2344,17 +2376,6 @@ async function sendAIMessage(){
     input.focus();
 
 }
-
-
-/* =====================================================
-   AUTO OPEN AI AFTER A SHORT DELAY
-   ===================================================== */
-
-/*
-   We intentionally do NOT automatically open the chat.
-   The customer controls when to start the AI conversation.
-*/
-
 
 </script>
 
