@@ -52,9 +52,7 @@ button{
     margin:auto;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ================= HEADER ================= */
 
 header{
     background:rgba(8,8,8,.96);
@@ -114,9 +112,7 @@ header{
     border-radius:8px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* ================= HERO ================= */
 
 .hero{
     min-height:680px;
@@ -204,9 +200,7 @@ header{
     transform:translateY(-3px);
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* ================= SECTIONS ================= */
 
 section{
     padding:85px 0;
@@ -232,9 +226,7 @@ section{
     margin:auto;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ================= ABOUT ================= */
 
 .about{
     background:#111;
@@ -282,9 +274,7 @@ section{
     border-bottom:1px solid #292929;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* ================= SERVICES ================= */
 
 .services{
     background:#0d0d0d;
@@ -361,9 +351,7 @@ section{
     font-weight:bold;
 }
 
-/* =========================
-   WHY
-========================= */
+/* ================= WHY ================= */
 
 .why{
     background:#151515;
@@ -398,9 +386,7 @@ section{
     font-size:14px;
 }
 
-/* =========================
-   PORTFOLIO
-========================= */
+/* ================= PORTFOLIO ================= */
 
 .portfolio{
     background:#0d0d0d;
@@ -449,9 +435,7 @@ section{
     font-size:13px;
 }
 
-/* =========================
-   HOW IT WORKS
-========================= */
+/* ================= HOW ================= */
 
 .how{
     background:#151515;
@@ -493,9 +477,7 @@ section{
     font-size:14px;
 }
 
-/* =========================
-   FAQ
-========================= */
+/* ================= FAQ ================= */
 
 .faq{
     background:#0d0d0d;
@@ -525,9 +507,7 @@ details p{
     padding-top:12px;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* ================= CONTACT ================= */
 
 .contact{
     background:#151515;
@@ -573,9 +553,7 @@ details p{
     color:var(--gold);
 }
 
-/* =========================
-   CTA
-========================= */
+/* ================= CTA ================= */
 
 .cta{
     background:linear-gradient(135deg,#171717,#090909);
@@ -597,9 +575,7 @@ details p{
     margin:0 auto 30px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ================= FOOTER ================= */
 
 footer{
     background:#080808;
@@ -637,9 +613,7 @@ footer a:hover{
     font-size:13px;
 }
 
-/* =========================
-   WHATSAPP
-========================= */
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
     position:fixed;
@@ -658,9 +632,7 @@ footer a:hover{
     box-shadow:0 5px 20px rgba(0,0,0,.4);
 }
 
-/* =========================
-   AI BUTTON
-========================= */
+/* ================= AI BUTTON ================= */
 
 .ai-launcher{
     position:fixed;
@@ -697,9 +669,7 @@ footer a:hover{
     box-shadow:0 4px 15px rgba(0,0,0,.3);
 }
 
-/* =========================
-   AI CHAT
-========================= */
+/* ================= AI CHAT ================= */
 
 .ai-panel{
     position:fixed;
@@ -728,6 +698,7 @@ footer a:hover{
         opacity:0;
         transform:translateY(15px) scale(.98);
     }
+
     to{
         opacity:1;
         transform:translateY(0) scale(1);
@@ -795,7 +766,6 @@ footer a:hover{
     font-size:14px;
     line-height:1.5;
     white-space:pre-wrap;
-    overflow-wrap:anywhere;
 }
 
 .ai-message.bot{
@@ -871,7 +841,6 @@ footer a:hover{
     font-size:19px;
     cursor:pointer;
     font-weight:bold;
-    flex-shrink:0;
 }
 
 .ai-send:disabled{
@@ -899,9 +868,7 @@ footer a:hover{
     font-size:13px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:850px){
 
@@ -1020,11 +987,10 @@ footer a:hover{
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
+
 <div class="container navbar">
 
 <a href="#home" class="logo">
@@ -1032,13 +998,15 @@ OMWANDHO
 <span>GRAPHIC & AUTO LAB</span>
 </a>
 
-<button class="menu-btn"
+<button
+class="menu-btn"
 onclick="toggleMenu()"
 aria-label="Open menu">
 ☰
 </button>
 
 <nav class="nav-links" id="navLinks">
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -1046,15 +1014,14 @@ aria-label="Open menu">
 <a href="#how">How It Works</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </div>
+
 </header>
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
@@ -1092,12 +1059,10 @@ WHATSAPP US
 </div>
 
 </div>
+
 </section>
 
-
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
@@ -1140,24 +1105,25 @@ CONTACT US
 <h3>What We Do</h3>
 
 <ul class="about-list">
+
 <li>✓ Professional Graphic Design</li>
 <li>✓ Printing & Large Format Printing</li>
 <li>✓ Business & Promotional Branding</li>
 <li>✓ Vehicle & Car Painting</li>
 <li>✓ Custom Creative Solutions</li>
 <li>✓ Design + Print + Branding Packages</li>
+
 </ul>
 
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- ================= SERVICES ================= -->
 
 <section class="services" id="services">
 
@@ -1177,7 +1143,6 @@ Our AI assistant can also help you get started.
 </div>
 
 <div class="service-grid">
-
 
 <!-- GRAPHIC DESIGN -->
 
@@ -1248,8 +1213,8 @@ Professional visual designs for businesses, events and personal projects.
 </div>
 
 </div>
-</div>
 
+</div>
 
 <!-- PRINTING -->
 
@@ -1320,8 +1285,8 @@ Printing solutions for businesses, events, products and promotions.
 </div>
 
 </div>
-</div>
 
+</div>
 
 <!-- BRANDING -->
 
@@ -1386,8 +1351,8 @@ Complete visual branding solutions for professional businesses.
 </div>
 
 </div>
-</div>
 
+</div>
 
 <!-- CAR PAINTING -->
 
@@ -1446,16 +1411,16 @@ Vehicle paint and finishing solutions for automotive projects.
 </div>
 
 </div>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-
-<!-- =========================
-     WHY CHOOSE US
-========================= -->
+<!-- ================= WHY ================= -->
 
 <section class="why">
 
@@ -1500,13 +1465,12 @@ We focus on quality, creativity and practical solutions.
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-
-<!-- =========================
-     PORTFOLIO
-========================= -->
+<!-- ================= PORTFOLIO ================= -->
 
 <section class="portfolio" id="portfolio">
 
@@ -1631,13 +1595,12 @@ your GitHub repository whenever you complete new projects.
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-
-<!-- =========================
-     HOW IT WORKS
-========================= -->
+<!-- ================= HOW IT WORKS ================= -->
 
 <section class="how" id="how">
 
@@ -1682,13 +1645,12 @@ Getting your project started is simple.
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-
-<!-- =========================
-     FAQ
-========================= -->
+<!-- ================= FAQ ================= -->
 
 <section class="faq" id="faq">
 
@@ -1740,13 +1702,12 @@ Frequently Asked <span>Questions</span>
 </details>
 
 </div>
+
 </div>
+
 </section>
 
-
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
 
@@ -1771,20 +1732,33 @@ Tell us what you need and let's bring your idea to life.
 <h3>Contact Details</h3>
 
 <div class="contact-item">
+
 <strong>📞 Call / WhatsApp</strong>
-<a href="tel:+254758560246">0758 560 246</a>
+
+<a href="tel:+254758560246">
+0758 560 246
+</a>
+
 </div>
 
 <div class="contact-item">
+
 <strong>📧 Email</strong>
+
 <a href="mailto:omwandhopeter89@gmail.com">
 omwandhopeter89@gmail.com
 </a>
+
 </div>
 
 <div class="contact-item">
+
 <strong>📍 Location</strong>
-<span>Thika, Kiganjo, Kenya</span>
+
+<span>
+Thika, Kiganjo, Kenya
+</span>
+
 </div>
 
 </div>
@@ -1794,33 +1768,40 @@ omwandhopeter89@gmail.com
 <h3>Ready to Order?</h3>
 
 <p style="color:#aaa;margin-bottom:25px;">
+
 Send your service requirements, photos, measurements or ideas.
 You can also ask OMWANDHO AI for help before contacting us.
+
 </p>
 
 <a
 class="btn btn-gold"
 href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab.%20I%20would%20like%20to%20request%20a%20service.%20My%20project%20is%3A"
 target="_blank">
+
 START ON WHATSAPP
+
 </a>
 
 <br><br>
 
-<a class="btn btn-outline" href="tel:+254758560246">
+<a
+class="btn btn-outline"
+href="tel:+254758560246">
+
 CALL NOW
+
 </a>
 
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-
-<!-- =========================
-     CTA
-========================= -->
+<!-- ================= CTA ================= -->
 
 <section class="cta">
 
@@ -1835,24 +1816,33 @@ Don't worry if you don't know exactly what you need.
 Tell us your idea and our team can help you choose a suitable solution.
 </p>
 
-<div class="buttons" style="justify-content:center;">
+<div
+class="buttons"
+style="justify-content:center;">
 
-<button class="btn btn-gold" onclick="openAI()">
+<button
+class="btn btn-gold"
+onclick="openAI()">
+
 🤖 ASK OMWANDHO AI
+
 </button>
 
-<a href="#portfolio" class="btn btn-outline">
+<a
+href="#portfolio"
+class="btn btn-outline">
+
 VIEW OUR WORK
+
 </a>
 
 </div>
+
 </div>
+
 </section>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1905,8 +1895,12 @@ Email Us
 </p>
 
 <p>
-<a href="https://wa.me/254758560246" target="_blank">
+<a
+href="https://wa.me/254758560246"
+target="_blank">
+
 WhatsApp
+
 </a>
 </p>
 
@@ -1923,31 +1917,36 @@ All Rights Reserved.
 </div>
 
 </div>
+
 </footer>
 
+<!-- ================= AI LABEL ================= -->
 
-<!-- =========================
-     AI FLOATING BUTTON
-========================= -->
+<div
+class="ai-label"
+id="aiLabel">
 
-<div class="ai-label" id="aiLabel">
 🤖 Ask OMWANDHO AI
+
 </div>
+
+<!-- ================= AI LAUNCHER ================= -->
 
 <button
 class="ai-launcher"
 id="aiLauncher"
 onclick="toggleAI()"
 aria-label="Open OMWANDHO AI">
+
 🤖
+
 </button>
 
+<!-- ================= AI PANEL ================= -->
 
-<!-- =========================
-     AI CHAT PANEL
-========================= -->
-
-<div class="ai-panel" id="aiPanel">
+<div
+class="ai-panel"
+id="aiPanel">
 
 <div class="ai-header">
 
@@ -1975,15 +1974,19 @@ OMWANDHO AI
 class="ai-close"
 onclick="closeAI()"
 aria-label="Close AI">
+
 ×
+
 </button>
 
 </div>
 
-
-<div class="ai-messages" id="aiMessages">
+<div
+class="ai-messages"
+id="aiMessages">
 
 <div class="ai-message bot">
+
 Hello 👋 Welcome to Omwandho Graphic & Auto Lab.
 
 I can help you with:
@@ -1994,10 +1997,10 @@ I can help you with:
 🚗 Car Painting
 
 What would you like help with today?
-</div>
 
 </div>
 
+</div>
 
 <div class="ai-quick">
 
@@ -2023,14 +2026,14 @@ What would you like help with today?
 
 </div>
 
-
 <a
 class="ai-whatsapp"
 href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab%2C%20I%20would%20like%20to%20make%20an%20order."
 target="_blank">
-💬 Continue on WhatsApp
-</a>
 
+💬 Continue on WhatsApp
+
+</a>
 
 <div class="ai-input-area">
 
@@ -2045,59 +2048,53 @@ onkeydown="handleAIKey(event)"></textarea>
 id="aiSend"
 class="ai-send"
 onclick="sendAIMessage()">
+
 ➤
+
 </button>
 
 </div>
 
 </div>
 
-
-<!-- =========================
-     WHATSAPP FLOATING BUTTON
-========================= -->
+<!-- ================= FLOATING WHATSAPP ================= -->
 
 <a
 class="whatsapp"
 href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab%2C%20I%20need%20your%20services."
 target="_blank"
 aria-label="WhatsApp">
-☏
-</a>
 
+☏
+
+</a>
 
 <script>
 
-/* =========================================================
-   OMWANDHO GRAPHIC & AUTO LAB
-   WEBSITE + OMWANDHO AI
-   ========================================================= */
+/* =====================================================
+   OMWANDHO AI CONFIGURATION
+   ===================================================== */
 
+/*
+   THIS IS YOUR LIVE CLOUDFLARE CHAT ENDPOINT.
 
-/* =========================================================
-   CLOUDFLARE AI CHAT ENDPOINT
-
-   Your working Cloudflare endpoint is:
-
-   https://omwandhopeterai.omwandhopeter89.workers.dev/chat
-
-   DO NOT add /chat again anywhere else.
-   ========================================================= */
+   DO NOT REMOVE /chat
+*/
 
 const AI_WORKER_URL =
 "https://omwandhopeterai.omwandhopeter89.workers.dev/chat";
 
 
-/* =========================================================
+/* =====================================================
    MOBILE MENU
-   ========================================================= */
+   ===================================================== */
 
 function toggleMenu(){
 
-    const nav =
-    document.getElementById("navLinks");
-
-    nav.classList.toggle("active");
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
 
 }
 
@@ -2118,9 +2115,9 @@ document
 });
 
 
-/* =========================================================
-   CURRENT YEAR
-   ========================================================= */
+/* =====================================================
+   YEAR
+   ===================================================== */
 
 document
 .getElementById("year")
@@ -2128,9 +2125,9 @@ document
 new Date().getFullYear();
 
 
-/* =========================================================
+/* =====================================================
    OPEN AI
-   ========================================================= */
+   ===================================================== */
 
 function openAI(){
 
@@ -2146,21 +2143,18 @@ function openAI(){
 
     setTimeout(function(){
 
-        const input =
-        document.getElementById("aiInput");
-
-        if(input){
-            input.focus();
-        }
+        document
+        .getElementById("aiInput")
+        .focus();
 
     },200);
 
 }
 
 
-/* =========================================================
+/* =====================================================
    CLOSE AI
-   ========================================================= */
+   ===================================================== */
 
 function closeAI(){
 
@@ -2177,9 +2171,9 @@ function closeAI(){
 }
 
 
-/* =========================================================
+/* =====================================================
    TOGGLE AI
-   ========================================================= */
+   ===================================================== */
 
 function toggleAI(){
 
@@ -2199,9 +2193,9 @@ function toggleAI(){
 }
 
 
-/* =========================================================
+/* =====================================================
    QUICK QUESTIONS
-   ========================================================= */
+   ===================================================== */
 
 function quickAsk(text){
 
@@ -2215,9 +2209,9 @@ function quickAsk(text){
 }
 
 
-/* =========================================================
+/* =====================================================
    ENTER KEY
-   ========================================================= */
+   ===================================================== */
 
 function handleAIKey(event){
 
@@ -2235,9 +2229,9 @@ function handleAIKey(event){
 }
 
 
-/* =========================================================
-   ADD CHAT MESSAGE
-   ========================================================= */
+/* =====================================================
+   ADD MESSAGE
+   ===================================================== */
 
 function addAIMessage(text,type){
 
@@ -2251,7 +2245,7 @@ function addAIMessage(text,type){
     "ai-message " + type;
 
     message.textContent =
-    String(text);
+    text;
 
     container.appendChild(message);
 
@@ -2261,38 +2255,40 @@ function addAIMessage(text,type){
 }
 
 
-/* =========================================================
+/* =====================================================
    SHOW TYPING
-   ========================================================= */
+   ===================================================== */
 
 function showTyping(){
+
+    removeTyping();
 
     const container =
     document.getElementById("aiMessages");
 
-    removeTyping();
-
     const typing =
     document.createElement("div");
 
-    typing.id="aiTyping";
+    typing.id =
+    "aiTyping";
 
-    typing.className="ai-typing";
+    typing.className =
+    "ai-typing";
 
-    typing.textContent=
+    typing.textContent =
     "OMWANDHO AI is typing...";
 
     container.appendChild(typing);
 
-    container.scrollTop=
+    container.scrollTop =
     container.scrollHeight;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    REMOVE TYPING
-   ========================================================= */
+   ===================================================== */
 
 function removeTyping(){
 
@@ -2300,99 +2296,17 @@ function removeTyping(){
     document.getElementById("aiTyping");
 
     if(typing){
+
         typing.remove();
+
     }
 
 }
 
 
-/* =========================================================
-   GET AI REPLY
-   ========================================================= */
-
-function extractAIReply(data){
-
-    if(!data){
-        return "";
-    }
-
-
-    /* Your current Cloudflare response */
-
-    if(
-        typeof data.reply === "string" &&
-        data.reply.trim()
-    ){
-
-        return data.reply.trim();
-
-    }
-
-
-    /* Other possible response formats */
-
-    if(
-        typeof data.message === "string" &&
-        data.message.trim()
-    ){
-
-        return data.message.trim();
-
-    }
-
-
-    if(
-        typeof data.response === "string" &&
-        data.response.trim()
-    ){
-
-        return data.response.trim();
-
-    }
-
-
-    if(
-        data.data &&
-        typeof data.data.reply === "string" &&
-        data.data.reply.trim()
-    ){
-
-        return data.data.reply.trim();
-
-    }
-
-
-    if(
-        data.result &&
-        typeof data.result.reply === "string" &&
-        data.result.reply.trim()
-    ){
-
-        return data.result.reply.trim();
-
-    }
-
-
-    return "";
-
-}
-
-
-/* =========================================================
+/* =====================================================
    SEND MESSAGE TO CLOUDFLARE
-
-   IMPORTANT:
-
-   POST
-   Content-Type: application/json
-
-   Body:
-   {
-       "message":"user question"
-   }
-
-   This matches the Cloudflare endpoint you tested.
-   ========================================================= */
+   ===================================================== */
 
 async function sendAIMessage(){
 
@@ -2402,22 +2316,20 @@ async function sendAIMessage(){
     const sendButton =
     document.getElementById("aiSend");
 
-
-    if(!input || !sendButton){
-        return;
-    }
-
-
     const message =
     input.value.trim();
 
 
     if(!message){
+
         return;
+
     }
 
 
-    /* Show customer's message */
+    /*
+       Show customer's message immediately.
+    */
 
     addAIMessage(
         message,
@@ -2425,17 +2337,9 @@ async function sendAIMessage(){
     );
 
 
-    /* Clear input */
-
     input.value="";
 
-
-    /* Disable send button */
-
     sendButton.disabled=true;
-
-
-    /* Show typing */
 
     showTyping();
 
@@ -2443,7 +2347,9 @@ async function sendAIMessage(){
     try{
 
         /*
-         * Send request to Cloudflare Worker.
+         * Send POST request to:
+         *
+         * /chat
          */
 
         const response =
@@ -2453,32 +2359,43 @@ async function sendAIMessage(){
                 method:"POST",
 
                 headers:{
-                    "Content-Type":"application/json"
+                    "Content-Type":
+                    "application/json",
+
+                    "Accept":
+                    "application/json"
                 },
 
-                body:JSON.stringify({
-                    message:message
+                body:
+                JSON.stringify({
+
+                    message:
+                    message
+
                 })
             }
         );
 
 
         /*
-         * Get response as text first.
-         *
-         * This makes the website safer if
-         * Cloudflare ever returns an unexpected
-         * response.
+         * Log HTTP status.
          */
-
-        const rawText =
-        await response.text();
-
 
         console.log(
             "OMWANDHO AI HTTP status:",
             response.status
         );
+
+
+        /*
+         * Read response as TEXT first.
+         *
+         * This makes debugging much easier.
+         */
+
+        const rawText =
+        await response.text();
+
 
         console.log(
             "OMWANDHO AI raw response:",
@@ -2487,13 +2404,13 @@ async function sendAIMessage(){
 
 
         /*
-         * HTTP error.
+         * HTTP ERROR
          */
 
         if(!response.ok){
 
             throw new Error(
-                "Cloudflare returned HTTP " +
+                "HTTP " +
                 response.status +
                 ": " +
                 rawText
@@ -2503,7 +2420,7 @@ async function sendAIMessage(){
 
 
         /*
-         * Convert JSON response.
+         * Convert response to JSON.
          */
 
         let data;
@@ -2515,49 +2432,131 @@ async function sendAIMessage(){
 
         }catch(jsonError){
 
-            throw new Error(
-                "The AI server did not return valid JSON."
+            console.error(
+                "OMWANDHO AI JSON error:",
+                jsonError
             );
+
+            removeTyping();
+
+            addAIMessage(
+                "The AI server responded, but the response was not valid JSON. Please try again.",
+                "bot"
+            );
+
+            return;
 
         }
 
 
         console.log(
-            "OMWANDHO AI JSON:",
+            "OMWANDHO AI parsed data:",
             data
         );
 
-
-        /*
-         * Remove typing indicator.
-         */
 
         removeTyping();
 
 
         /*
-         * Find the AI reply.
+         * YOUR CURRENT WORKER RESPONSE:
+         *
+         * {
+         *   "success": true,
+         *   "assistant": "OMWANDHO AI",
+         *   "reply": "Hello..."
+         * }
+         *
+         * We read data.reply directly.
          */
 
-        const reply =
-        extractAIReply(data);
+        if(
+            data &&
+            data.success === true &&
+            typeof data.reply === "string" &&
+            data.reply.trim() !== ""
+        ){
+
+            addAIMessage(
+                data.reply.trim(),
+                "bot"
+            );
+
+            return;
+
+        }
 
 
         /*
-         * Display reply.
+         * BACKUP RESPONSE FORMATS
          */
 
-        if(reply){
+        let reply="";
+
+
+        if(
+            data &&
+            typeof data.reply === "string"
+        ){
+
+            reply =
+            data.reply;
+
+        }
+
+
+        else if(
+            data &&
+            typeof data.message === "string"
+        ){
+
+            reply =
+            data.message;
+
+        }
+
+
+        else if(
+            data &&
+            typeof data.response === "string"
+        ){
+
+            reply =
+            data.response;
+
+        }
+
+
+        else if(
+            data &&
+            data.data &&
+            typeof data.data.reply === "string"
+        ){
+
+            reply =
+            data.data.reply;
+
+        }
+
+
+        /*
+         * DISPLAY REPLY
+         */
+
+        if(
+            reply &&
+            reply.trim() !== ""
+        ){
 
             addAIMessage(
-                reply,
+                reply.trim(),
                 "bot"
             );
 
         }else{
 
             addAIMessage(
-                "The AI service responded, but no reply was found. Please try again.",
+                "The AI service responded, but I could not find the AI reply. Please try again.",
                 "bot"
             );
 
@@ -2567,7 +2566,7 @@ async function sendAIMessage(){
     }catch(error){
 
         console.error(
-            "OMWANDHO AI ERROR:",
+            "OMWANDHO AI connection error:",
             error
         );
 
@@ -2575,65 +2574,21 @@ async function sendAIMessage(){
         removeTyping();
 
 
-        /*
-         * User-friendly error.
-         */
-
         addAIMessage(
-            "OMWANDHO AI could not connect to the chat service right now. Please try again in a moment or continue with us on WhatsApp.",
+            "OMWANDHO AI could not connect to the chat service right now. Please check your internet connection and try again. You can also continue with us on WhatsApp.",
             "bot"
         );
 
+
+    }finally{
+
+        sendButton.disabled=false;
+
+        input.focus();
+
     }
 
-
-    /*
-     * Re-enable button.
-     */
-
-    sendButton.disabled=false;
-
-
-    /*
-     * Put cursor back into input.
-     */
-
-    input.focus();
-
 }
-
-
-/* =========================================================
-   AUTO-RESIZE TEXTAREA
-   ========================================================= */
-
-const aiInput =
-document.getElementById("aiInput");
-
-
-if(aiInput){
-
-    aiInput.addEventListener(
-        "input",
-        function(){
-
-            this.style.height="auto";
-
-            this.style.height =
-            Math.min(
-                this.scrollHeight,
-                100
-            ) + "px";
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   END OMWANDHO AI
-   ========================================================= */
 
 </script>
 
