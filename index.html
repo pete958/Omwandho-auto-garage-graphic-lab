@@ -1,1096 +1,2265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+
+<title>Omwandho Graphic & Auto Lab | OMWANDHO AI</title>
+
+<meta name="description"
+content="Omwandho Graphic & Auto Lab — Graphic Design, Printing, Business Branding and Automotive Services in Thika, Kenya.">
+
+<style>
+:root{
+  --navy:#07111f;
+  --navy2:#0d1b2e;
+  --gold:#d7a83f;
+  --gold2:#f2cf70;
+  --white:#ffffff;
+  --text:#17202a;
+  --muted:#687381;
+  --light:#f5f7fa;
+  --border:#e5e9ef;
+  --green:#16a34a;
+  --red:#dc2626;
+  --shadow:0 18px 50px rgba(7,17,31,.12);
+  --radius:20px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff;
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.topbar{
+  background:#030a13;
+  color:#dbe3ec;
+  font-size:13px;
+  padding:8px 0;
+}
+
+.topbar-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.topbar a{
+  color:#fff;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,17,31,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:46px;
+  height:46px;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--gold2);
+  font-weight:900;
+  font-size:17px;
+}
+
+.logo-text strong{
+  display:block;
+  color:#fff;
+  font-size:17px;
+}
+
+.logo-text span{
+  color:#b7c0cb;
+  font-size:11px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:#e7edf4;
+  padding:10px 13px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  background:rgba(255,255,255,.08);
+  color:var(--gold2);
+}
+
+.menu-btn{
+  display:none;
+  border:1px solid #445064;
+  background:transparent;
+  color:#fff;
+  padding:9px 12px;
+  border-radius:10px;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border:0;
+  border-radius:12px;
+  padding:13px 18px;
+  font-weight:700;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#111;
+}
+
+.btn-dark{
+  background:var(--navy);
+  color:#fff;
+}
+
+.btn-green{
+  background:var(--green);
+  color:#fff;
+}
+
+.btn-outline{
+  background:transparent;
+  color:var(--navy);
+  border:1px solid #ccd4de;
+}
+
+.btn-light{
+  background:#fff;
+  color:var(--navy);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(215,168,63,.18),transparent 30%),
+    linear-gradient(135deg,#07111f,#10243b);
+  color:#fff;
+  padding:90px 0 75px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:55px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--gold2);
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.eyebrow::before{
+  content:"";
+  width:30px;
+  height:2px;
+  background:var(--gold);
+}
+
+.hero h1{
+  font-size:clamp(42px,6vw,72px);
+  line-height:1.02;
+  letter-spacing:-2px;
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--gold2);
+}
+
+.hero p{
+  color:#cbd5e1;
+  max-width:680px;
+  font-size:18px;
+  margin-bottom:28px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.hero-card{
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  border-radius:24px;
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+
+.status{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:#dce6ef;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.status-dot{
+  width:10px;
+  height:10px;
+  background:#31d16c;
+  border-radius:50%;
+  box-shadow:0 0 15px #31d16c;
+}
+
+.hero-card h3{
+  font-size:25px;
+  margin-bottom:12px;
+}
+
+.hero-card p{
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+  padding:80px 0;
+}
+
+.section-head{
+  max-width:720px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.section-head small{
+  color:#a07818;
+  text-transform:uppercase;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+
+.section-head h2{
+  font-size:clamp(30px,4vw,46px);
+  line-height:1.1;
+  margin:9px 0 14px;
+}
+
+.section-head p{
+  color:var(--muted);
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  background:var(--light);
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.service-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px;
+  transition:.25s;
+  box-shadow:0 8px 25px rgba(7,17,31,.04);
+}
+
+.service-card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+  border-color:#d7b75f;
+}
+
+.service-icon{
+  width:55px;
+  height:55px;
+  border-radius:15px;
+  background:#fff7df;
+  display:grid;
+  place-items:center;
+  font-size:26px;
+  margin-bottom:20px;
+}
+
+.service-card h3{
+  margin-bottom:10px;
+}
+
+.service-card p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.service-card ul{
+  list-style:none;
+  color:#4d5966;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.service-card li{
+  margin:6px 0;
+}
+
+.service-card li::before{
+  content:"✓";
+  color:#a07818;
+  font-weight:bold;
+  margin-right:7px;
+}
+
+/* ================= QUICK ACTIONS ================= */
+
+.quick{
+  background:#fff;
+}
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.quick-btn{
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:16px;
+  padding:20px;
+  text-align:left;
+  font-weight:800;
+  color:var(--navy);
+  transition:.2s;
+}
+
+.quick-btn:hover{
+  border-color:var(--gold);
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+
+.quick-btn span{
+  display:block;
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:var(--navy);
+  color:#fff;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.about h2{
+  font-size:clamp(32px,4vw,50px);
+  line-height:1.1;
+  margin:10px 0 18px;
+}
+
+.about p{
+  color:#c8d2dd;
+  margin-bottom:18px;
+}
+
+.about-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:25px 0;
+}
+
+.about-item{
+  padding:16px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:13px;
+}
+
+.about-item strong{
+  display:block;
+  color:var(--gold2);
+}
+
+.about-panel{
+  border:1px solid rgba(255,255,255,.1);
+  padding:30px;
+  border-radius:24px;
+  background:rgba(255,255,255,.05);
+}
+
+.about-panel h3{
+  margin-bottom:18px;
+}
+
+.stat-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.stat{
+  padding:20px;
+  border-radius:15px;
+  background:rgba(255,255,255,.06);
+}
+
+.stat strong{
+  display:block;
+  color:var(--gold2);
+  font-size:30px;
+}
+
+/* ================= PROCESS ================= */
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.step{
+  position:relative;
+  padding:25px;
+  border:1px solid var(--border);
+  border-radius:18px;
+}
+
+.step-number{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:var(--navy);
+  color:var(--gold2);
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.step h3{
+  margin-bottom:8px;
+}
+
+.step p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ================= AI ================= */
+
+.ai-section{
+  background:linear-gradient(135deg,#f7f3e8,#fff);
+}
+
+.ai-shell{
+  max-width:950px;
+  margin:auto;
+  border:1px solid #e5d7ad;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:#fff;
+}
+
+.ai-head{
+  background:var(--navy);
+  color:#fff;
+  padding:22px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.ai-title{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.ai-avatar{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#111;
+  font-weight:900;
+}
+
+.ai-head small{
+  color:#aeb9c6;
+}
+
+.ai-body{
+  padding:22px;
+}
+
+.ai-messages{
+  height:360px;
+  overflow-y:auto;
+  padding:8px;
+  background:#f7f8fa;
+  border-radius:17px;
+  margin-bottom:15px;
+}
+
+.msg{
+  max-width:80%;
+  padding:12px 15px;
+  border-radius:15px;
+  margin:9px 0;
+  font-size:14px;
+  white-space:pre-wrap;
+}
+
+.msg.ai{
+  background:#fff;
+  border:1px solid #e1e5ea;
+}
+
+.msg.user{
+  background:var(--navy);
+  color:#fff;
+  margin-left:auto;
+}
+
+.ai-quick{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:12px;
+}
+
+.ai-quick button{
+  flex:0 0 auto;
+  border:1px solid #d8dee7;
+  background:#fff;
+  border-radius:30px;
+  padding:8px 12px;
+  font-size:12px;
+}
+
+.ai-form{
+  display:flex;
+  gap:10px;
+}
+
+.ai-form input{
+  flex:1;
+  border:1px solid #ccd4df;
+  border-radius:13px;
+  padding:14px;
+  outline:none;
+}
+
+.ai-form input:focus{
+  border-color:var(--gold);
+}
+
+/* ================= QUOTE ================= */
+
+.quote{
+  background:var(--light);
+}
+
+.quote-box{
+  max-width:850px;
+  margin:auto;
+  background:#fff;
+  border-radius:25px;
+  padding:35px;
+  box-shadow:var(--shadow);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+.field label{
+  font-size:13px;
+  font-weight:800;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #d6dde6;
+  border-radius:11px;
+  outline:none;
+}
+
+.field textarea{
+  min-height:110px;
+  resize:vertical;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  background:#fff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:28px;
+}
+
+.contact-line{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:16px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.contact-line:last-child{
+  border-bottom:0;
+}
+
+.contact-icon{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  background:#fff7df;
+  border-radius:11px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#030a13;
+  color:#b9c3cf;
+  padding:45px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:40px;
+}
+
+footer h3{
+  color:#fff;
+  margin-bottom:13px;
+}
+
+footer p{
+  font-size:14px;
+}
+
+.footer-links{
+  list-style:none;
+}
+
+.footer-links li{
+  margin:8px 0;
+}
+
+.footer-links a:hover{
+  color:var(--gold2);
+}
+
+.copyright{
+  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:35px;
+  padding-top:20px;
+  text-align:center;
+  font-size:12px;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:900;
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+}
+
+.float-btn{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  border:0;
+  font-size:20px;
+}
+
+.float-wa{
+  background:#16a34a;
+}
+
+.float-ai{
+  background:var(--navy);
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  background:rgba(0,0,0,.65);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  width:min(600px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:22px;
+  padding:28px;
+  position:relative;
+}
+
+.modal-close{
+  position:absolute;
+  top:12px;
+  right:15px;
+  border:0;
+  background:#eef1f5;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:950px){
+
+  .service-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:65px;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:76px;
+    left:0;
+    right:0;
+    background:var(--navy);
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    padding:15px;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+
+  .nav-links a{
+    display:block;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:60px 0;
+  }
+
+  .topbar-inner{
+    justify-content:center;
+  }
+
+  .service-grid,
+  .quick-grid,
+  .process-grid,
+  .about-list,
+  .stat-grid,
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .hero h1{
+    letter-spacing:-1px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  .ai-head{
+    align-items:flex-start;
+  }
+
+  .ai-form{
+    flex-direction:column;
+  }
+
+  .ai-form .btn{
+    width:100%;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= TOP INFORMATION BAR ================= -->
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>🇰🇪 Proudly serving customers in Thika, Kenya</span>
+
+    <span>
+      <a href="tel:+254758560246">📞 0758 560 246</a>
+      &nbsp; | &nbsp;
+      <a href="mailto:omwandhopeter89@gmail.com">✉️ Email</a>
+    </span>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+  <div class="container nav">
+
+    <a href="#home" class="logo">
+      <div class="logo-mark">OG</div>
+
+      <div class="logo-text">
+        <strong>OMWANDHO</strong>
+        <span>Graphic & Auto Lab</span>
+      </div>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#ai">OMWANDHO AI</a></li>
+      <li><a href="#quote">Get Quote</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a class="btn btn-gold" href="#quote">Request Quote</a>
+
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        Omwandho Graphic & Auto Lab
+      </div>
+
+      <h1>
+        Creativity.<br>
+        <span>Branding.</span><br>
+        Automotive.
+      </h1>
+
+      <p>
+        Professional graphic design, printing, business branding
+        and automotive finishing — serving businesses and individuals
+        from Thika, Kiganjo, Kenya.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="#services" class="btn btn-gold">
+          Explore Services
+        </a>
+
+        <a href="https://wa.me/254758560246?text=Hello%20Omwandho%20Graphic%20%26%20Auto%20Lab%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+           target="_blank"
+           class="btn btn-green">
+          💬 WhatsApp Us
+        </a>
+
+        <button class="btn btn-light" onclick="openAI()">
+          🤖 Talk to OMWANDHO AI
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="hero-card">
+
+      <div class="status">
+        <span class="status-dot"></span>
+        OMWANDHO AI online
+      </div>
+
+      <h3>
+        Your digital business assistant
+      </h3>
+
+      <p>
+        Ask about services, project requirements,
+        quotations or how to contact us.
+      </p>
+
+      <button class="btn btn-gold" onclick="openAI()">
+        Start AI Conversation →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= QUICK ACTIONS ================= -->
+
+<section class="quick">
+
+  <div class="container">
+
+    <div class="section-head">
+      <small>Quick access</small>
+      <h2>Everything you need</h2>
+      <p>
+        Get to the important information quickly.
+      </p>
+    </div>
+
+    <div class="quick-grid">
+
+      <button class="quick-btn" onclick="scrollToSection('services')">
+        <span>🎨</span>
+        Graphic Design
+      </button>
+
+      <button class="quick-btn" onclick="scrollToSection('services')">
+        <span>🖨️</span>
+        Printing
+      </button>
+
+      <button class="quick-btn" onclick="scrollToSection('services')">
+        <span>🏢</span>
+        Business Branding
+      </button>
+
+      <button class="quick-btn" onclick="scrollToSection('services')">
+        <span>🚗</span>
+        Automotive
+      </button>
+
+      <button class="quick-btn" onclick="openAI()">
+        <span>🤖</span>
+        Ask OMWANDHO AI
+      </button>
+
+      <button class="quick-btn" onclick="scrollToSection('quote')">
+        <span>📋</span>
+        Request a Quote
+      </button>
+
+      <a class="quick-btn" href="tel:+254758560246">
+        <span>📞</span>
+        Call 0758 560 246
+      </a>
+
+      <a class="quick-btn"
+         href="https://wa.me/254758560246"
+         target="_blank">
+        <span>💬</span>
+        WhatsApp Us
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-head">
+      <small>Our services</small>
+      <h2>Professional solutions under one roof</h2>
+      <p>
+        From your first idea to the final product,
+        we help turn your vision into something real.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <!-- GRAPHICS -->
+
+      <article class="service-card">
+
+        <div class="service-icon">🎨</div>
+
+        <h3>Graphic Design</h3>
+
+        <p>
+          Professional visual designs for businesses,
+          events and personal projects.
+        </p>
+
+        <ul>
+          <li>Logo Design</li>
+          <li>Posters & Flyers</li>
+          <li>Business Cards</li>
+          <li>Menus</li>
+          <li>Social Media Graphics</li>
+          <li>Invitations</li>
+          <li>Certificates</li>
+        </ul>
+
+        <button class="btn btn-dark" onclick="askAI('I need graphic design. Help me choose the right service.')">
+          Ask About Design
+        </button>
+
+      </article>
+
+      <!-- PRINTING -->
+
+      <article class="service-card">
+
+        <div class="service-icon">🖨️</div>
+
+        <h3>Printing</h3>
+
+        <p>
+          Printing solutions for marketing,
+          businesses and events.
+        </p>
+
+        <ul>
+          <li>Banners</li>
+          <li>Posters</li>
+          <li>Business Cards</li>
+          <li>Stickers & Labels</li>
+          <li>Menus & Flyers</li>
+          <li>Large Format</li>
+          <li>Custom Printing</li>
+        </ul>
+
+        <button class="btn btn-dark" onclick="askAI('I need printing. What information do you need from me?')">
+          Ask About Printing
+        </button>
+
+      </article>
+
+      <!-- BRANDING -->
+
+      <article class="service-card">
+
+        <div class="service-icon">🏢</div>
+
+        <h3>Business Branding</h3>
+
+        <p>
+          Make your business visible, professional
+          and memorable.
+        </p>
+
+        <ul>
+          <li>Shop Branding</li>
+          <li>Business Signage</li>
+          <li>Vehicle Branding</li>
+          <li>Banner + Frame + Stand</li>
+          <li>Product Branding</li>
+          <li>Corporate Branding</li>
+          <li>Event Branding</li>
+        </ul>
+
+        <button class="btn btn-dark" onclick="askAI('I want to brand my business. What details do you need?')">
+          Plan My Branding
+        </button>
+
+      </article>
+
+      <!-- AUTO -->
+
+      <article class="service-card">
+
+        <div class="service-icon">🚗</div>
+
+        <h3>Automotive</h3>
+
+        <p>
+          Automotive painting and finishing solutions
+          for vehicle owners.
+        </p>
+
+        <ul>
+          <li>Full Car Painting</li>
+          <li>Panel Painting</li>
+          <li>Scratch Repair</li>
+          <li>Colour Change</li>
+          <li>Touch-Up Painting</li>
+          <li>Custom Finishing</li>
+        </ul>
+
+        <button class="btn btn-dark" onclick="askAI('I need automotive painting. What details should I provide?')">
+          Ask About Automotive
+        </button>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+  <div class="container about-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        About Omwandho
+      </div>
+
+      <h2>
+        Built around skill, creativity and service.
+      </h2>
+
+      <p>
+        Omwandho Graphic & Auto Lab brings creative design,
+        printing, business branding and automotive work together
+        in one professional service.
+      </p>
+
+      <p>
+        Our goal is simple: understand what the customer needs,
+        deliver quality work and help businesses present themselves
+        professionally.
+      </p>
+
+      <div class="about-list">
+
+        <div class="about-item">
+          <strong>01</strong>
+          Customer Focus
+        </div>
+
+        <div class="about-item">
+          <strong>02</strong>
+          Creative Solutions
+        </div>
+
+        <div class="about-item">
+          <strong>03</strong>
+          Practical Service
+        </div>
+
+        <div class="about-item">
+          <strong>04</strong>
+          Professional Results
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn btn-gold">
+        Contact Our Team
+      </a>
+
+    </div>
+
+    <div class="about-panel">
+
+      <h3>Why customers can use us</h3>
+
+      <div class="stat-grid">
+
+        <div class="stat">
+          <strong>4</strong>
+          Main service areas
+        </div>
+
+        <div class="stat">
+          <strong>AI</strong>
+          Digital assistant
+        </div>
+
+        <div class="stat">
+          <strong>24/7</strong>
+          Website access
+        </div>
+
+        <div class="stat">
+          <strong>KE</strong>
+          Kenya based
+        </div>
+
+      </div>
+
+      <br>
+
+      <p>
+        Need help deciding what you need?
+        OMWANDHO AI can guide you before you contact the business.
+      </p>
+
+      <button class="btn btn-gold" onclick="openAI()">
+        🤖 Ask OMWANDHO AI
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= PROCESS ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+      <small>How it works</small>
+      <h2>Simple process</h2>
+      <p>
+        We keep the process straightforward.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Tell us</h3>
+        <p>
+          Explain what you want or use OMWANDHO AI for guidance.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Share details</h3>
+        <p>
+          Provide size, quantity, photos, colours or other project details.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Get a quote</h3>
+        <p>
+          The business reviews your requirements and prepares the quotation.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Proceed</h3>
+        <p>
+          Confirm the project directly with the business.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= AI ================= -->
+
+<section class="ai-section" id="ai">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <small>Artificial intelligence</small>
+
+      <h2>Meet OMWANDHO AI</h2>
+
+      <p>
+        Your digital assistant for Omwandho Graphic & Auto Lab.
+        Ask a question below.
+      </p>
+
+    </div>
+
+    <div class="ai-shell">
+
+      <div class="ai-head">
+
+        <div class="ai-title">
+
+          <div class="ai-avatar">AI</div>
+
+          <div>
+            <strong>OMWANDHO AI</strong><br>
+            <small>Official business assistant</small>
+          </div>
+
+        </div>
+
+        <span class="status">
+          <span class="status-dot"></span>
+          Online
+        </span>
+
+      </div>
+
+      <div class="ai-body">
+
+        <div class="ai-messages" id="aiMessages">
+
+          <div class="msg ai">
+            Hello 👋 I'm OMWANDHO AI, the official assistant for Omwandho Graphic & Auto Lab.
+
+I can help you with graphic design, printing, branding, car painting and quotation requirements.
+
+How can I help you today?
+          </div>
+
+        </div>
+
+        <div class="ai-quick">
+
+          <button onclick="askAI('I need a banner. What details do you need?')">
+            🎨 Banner
+          </button>
+
+          <button onclick="askAI('I need a logo. What information should I provide?')">
+            🖌️ Logo
+          </button>
+
+          <button onclick="askAI('I need printing. What details do you need?')">
+            🖨️ Printing
+          </button>
+
+          <button onclick="askAI('I want business branding. Help me.')">
+            🏢 Branding
+          </button>
+
+          <button onclick="askAI('I need car painting. What details should I provide?')">
+            🚗 Car Painting
+          </button>
+
+          <button onclick="askAI('I want a quotation. What information do you need?')">
+            📋 Quote
+          </button>
+
+        </div>
+
+        <form class="ai-form" id="aiForm">
+
+          <input
+            id="aiInput"
+            type="text"
+            placeholder="Ask OMWANDHO AI..."
+            autocomplete="off"
+            required
+          >
+
+          <button class="btn btn-dark" type="submit">
+            Send ➤
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= QUOTE ================= -->
+
+<section class="quote" id="quote">
+
+  <div class="container">
+
+    <div class="section-head">
+      <small>Start your project</small>
+      <h2>Request a quotation</h2>
+      <p>
+        Give us some basic information. Your request will be prepared
+        for WhatsApp.
+      </p>
+    </div>
+
+    <div class="quote-box">
+
+      <form id="quoteForm">
+
+        <div class="form-grid">
+
+          <div class="field">
+
+            <label>Your Name</label>
+
+            <input
+              id="quoteName"
+              type="text"
+              placeholder="Your name"
+              required
+            >
+
+          </div>
+
+          <div class="field">
+
+            <label>Service</label>
+
+            <select id="quoteService" required>
+
+              <option value="">Select service</option>
+              <option>Graphic Design</option>
+              <option>Printing</option>
+              <option>Business Branding</option>
+              <option>Car Painting</option>
+              <option>Other</option>
+
+            </select>
+
+          </div>
+
+          <div class="field">
+
+            <label>Project Size / Vehicle</label>
+
+            <input
+              id="quoteSize"
+              type="text"
+              placeholder="Example: 6ft × 3ft / Toyota Fielder"
+            >
+
+          </div>
+
+          <div class="field">
+
+            <label>Quantity</label>
+
+            <input
+              id="quoteQuantity"
+              type="text"
+              placeholder="Example: 2"
+            >
+
+          </div>
+
+          <div class="field full">
+
+            <label>Project Details</label>
+
+            <textarea
+              id="quoteDetails"
+              placeholder="Tell us what you need..."
+              required
+            ></textarea>
+
+          </div>
+
+          <div class="field full">
+
+            <button class="btn btn-green" type="submit">
+              💬 Send Quote Request on WhatsApp
+            </button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <small>Contact</small>
+
+      <h2>Let's talk about your project</h2>
+
+      <p>
+        Choose the contact method that works best for you.
+      </p>
+
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <h3>Business information</h3>
+
+        <div class="contact-line">
+
+          <div class="contact-icon">📍</div>
+
+          <div>
+            <strong>Location</strong>
+            <p>Thika, Kiganjo, Kenya</p>
+          </div>
+
+        </div>
+
+        <div class="contact-line">
+
+          <div class="contact-icon">📞</div>
+
+          <div>
+            <strong>Phone</strong>
+            <p>
+              <a href="tel:+254758560246">
+                0758 560 246
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="contact-line">
+
+          <div class="contact-icon">✉️</div>
+
+          <div>
+            <strong>Email</strong>
+            <p>
+              <a href="mailto:omwandhopeter89@gmail.com">
+                omwandhopeter89@gmail.com
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="contact-line">
+
+          <div class="contact-icon">🤖</div>
+
+          <div>
+            <strong>AI Assistant</strong>
+            <p>OMWANDHO AI — powered through our secure server.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>Important links</h3>
+
+        <p style="color:#687381;margin:10px 0 20px;">
+          Get direct access to the information you need.
+        </p>
+
+        <div style="display:grid;gap:11px;">
+
+          <a
+            href="https://wa.me/254758560246"
+            target="_blank"
+            class="btn btn-green">
+            💬 WhatsApp
+          </a>
+
+          <a
+            href="tel:+254758560246"
+            class="btn btn-dark">
+            📞 Call Us
+          </a>
+
+          <a
+            href="mailto:omwandhopeter89@gmail.com"
+            class="btn btn-outline">
+            ✉️ Send Email
+          </a>
+
+          <button
+            class="btn btn-gold"
+            onclick="openAI()">
+            🤖 Chat With OMWANDHO AI
+          </button>
+
+          <button
+            class="btn btn-outline"
+            onclick="shareWebsite()">
+            📱 Share Website
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>OMWANDHO</h3>
+
+        <p>
+          Omwandho Graphic & Auto Lab.
+          Graphic Design, Printing, Business Branding
+          and Automotive Services.
+        </p>
+
+        <br>
+
+        <a
+          href="https://wa.me/254758560246"
+          target="_blank"
+          class="btn btn-green">
+          💬 WhatsApp Us
+        </a>
+
+      </div>
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <ul class="footer-links">
+
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#ai">OMWANDHO AI</a></li>
+          <li><a href="#quote">Get Quote</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3>Services</h3>
+
+        <ul class="footer-links">
+
+          <li><a href="#services">Graphic Design</a></li>
+          <li><a href="#services">Printing</a></li>
+          <li><a href="#services">Business Branding</a></li>
+          <li><a href="#services">Car Painting</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+
+      © <span id="year"></span>
+      Omwandho Graphic & Auto Lab.
+      All rights reserved.
+
+      <br>
+
+      Thika, Kiganjo, Kenya
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- ================= FLOATING BUTTONS ================= -->
+
+<div class="floating">
+
+  <button
+    class="float-btn float-ai"
+    title="Chat with OMWANDHO AI"
+    onclick="openAI()">
+    🤖
+  </button>
+
+  <a
+    class="float-btn float-wa"
+    title="WhatsApp"
+    href="https://wa.me/254758560246"
+    target="_blank">
+    💬
+  </a>
+
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
 /*
 ===========================================================
-OMWANDHO AI — CLOUDFLARE WORKER
-Omwandho Graphic & Auto Lab
-Thika, Kiganjo, Kenya
-
-ENDPOINTS:
-  GET  /health
-  GET  /business
-  GET  /services
-  GET  /whatsapp
-  POST /chat
-
-IMPORTANT:
-  GEMINI_API_KEY must be stored as a Cloudflare Secret.
+OMWANDHO AI FRONTEND CONNECTION
 ===========================================================
 */
 
-
-/* =========================================================
-   CONFIGURATION
-========================================================= */
-
-const AI_MODEL = "gemini-2.5-flash";
-
-const GEMINI_API_URL =
-  `https://generativelanguage.googleapis.com/v1beta/models/${AI_MODEL}:generateContent`;
+const AI_API =
+  "https://peteromwandhoai.omwandhopeter89.workers.dev/chat";
 
 
-/* =========================================================
-   BUSINESS INFORMATION
-========================================================= */
+const aiMessages =
+  document.getElementById("aiMessages");
 
-const BUSINESS = {
-  name: "Omwandho Graphic & Auto Lab",
-  assistant: "OMWANDHO AI",
-  location: "Thika, Kiganjo, Kenya",
-  phone: "+254758560246",
-  email: "omwandhopeter89@gmail.com",
-  whatsapp: "https://wa.me/254758560246"
-};
+const aiInput =
+  document.getElementById("aiInput");
+
+const aiForm =
+  document.getElementById("aiForm");
 
 
-/* =========================================================
-   CORS
-========================================================= */
-
-const CORS_HEADERS = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, Accept",
-  "Access-Control-Max-Age": "86400"
-};
+let conversationHistory = [];
 
 
-/* =========================================================
-   JSON RESPONSE HELPER
-========================================================= */
+/* ================= MENU ================= */
 
-function jsonResponse(data, status = 200) {
+function toggleMenu(){
 
-  return new Response(
-    JSON.stringify(data),
-    {
-      status,
-      headers: {
-        ...CORS_HEADERS,
-        "Content-Type": "application/json; charset=UTF-8"
-      }
-    }
-  );
+  document
+    .getElementById("navLinks")
+    .classList.toggle("show");
 
 }
 
 
-/* =========================================================
-   TEXT RESPONSE HELPER
-========================================================= */
+/* ================= SCROLL ================= */
 
-function textResponse(text, status = 200) {
+function scrollToSection(id){
 
-  return new Response(
-    text,
-    {
-      status,
-      headers: {
-        ...CORS_HEADERS,
-        "Content-Type": "text/plain; charset=UTF-8"
-      }
-    }
-  );
+  document
+    .getElementById(id)
+    .scrollIntoView({
+      behavior:"smooth"
+    });
 
 }
 
 
-/* =========================================================
-   OPTIONS / CORS PREFLIGHT
-========================================================= */
+/* ================= OPEN AI ================= */
 
-function handleOptions() {
+function openAI(){
 
-  return new Response(null, {
-    status: 204,
-    headers: CORS_HEADERS
-  });
+  scrollToSection("ai");
+
+  setTimeout(function(){
+
+    aiInput.focus();
+
+  },500);
 
 }
 
 
-/* =========================================================
-   SYSTEM INSTRUCTIONS FOR OMWANDHO AI
-========================================================= */
+/* ================= ADD MESSAGE ================= */
 
-const SYSTEM_INSTRUCTION = `
-You are OMWANDHO AI, the official AI assistant for Omwandho Graphic & Auto Lab.
+function addMessage(text,type){
 
-BUSINESS:
-Omwandho Graphic & Auto Lab
+  const message =
+    document.createElement("div");
 
-LOCATION:
-Thika, Kiganjo, Kenya
+  message.className =
+    "msg " + type;
 
-PHONE / WHATSAPP:
-+254 758 560 246
+  message.textContent =
+    text;
 
-EMAIL:
-omwandhopeter89@gmail.com
+  aiMessages.appendChild(message);
 
-WHATSAPP:
-https://wa.me/254758560246
+  aiMessages.scrollTop =
+    aiMessages.scrollHeight;
+
+}
 
 
-YOUR MAIN PURPOSE:
-Help customers understand the business services, choose the right service, prepare their project requirements, and contact the business.
+/* ================= AI REQUEST ================= */
 
-SERVICES:
+async function sendAIMessage(message){
 
-1. GRAPHIC DESIGN
-- Logo design
-- Poster design
-- Flyer design
-- Business card design
-- Menu design
-- Social media designs
-- Invitation and event designs
-- Certificate and document design
-- Promotional graphics
+  if(!message){
+    return;
+  }
 
-2. PRINTING
-- Banner printing
-- Poster printing
-- Business card printing
-- Sticker printing
-- Label printing
-- Menu printing
-- Flyer printing
-- Large-format printing
-- Custom printing
+  addMessage(message,"user");
 
-3. BUSINESS BRANDING
-- Shop branding
-- Business signage
-- Vehicle branding
-- Banner + frame + stand packages
-- Product branding
-- Corporate branding
-- Event branding
+  aiInput.value = "";
 
-4. AUTOMOTIVE SERVICES
-- Full car painting
-- Panel painting
-- Scratch and damage repair
-- Colour change
-- Touch-up painting
-- Custom automotive finishing
+  const loading =
+    document.createElement("div");
+
+  loading.className =
+    "msg ai";
+
+  loading.textContent =
+    "OMWANDHO AI is thinking...";
+
+  aiMessages.appendChild(loading);
+
+  aiMessages.scrollTop =
+    aiMessages.scrollHeight;
 
 
-IMPORTANT BUSINESS RULES:
+  try{
 
-- Do not invent prices.
-- Do not claim a service is available at a particular price unless the customer has been given that price by the business.
-- If a customer asks for a price, explain that the exact price depends on the project and ask for the necessary details.
-- For banners, ask for size, quantity, design requirements and whether they need frame/stand.
-- For logos, ask for business name, preferred style, colours and any ideas.
-- For printing, ask what they want printed, size, quantity and whether they already have a design.
-- For car painting, ask for vehicle type, current colour, desired colour, whether it needs full painting or selected panels, and photos if possible.
-- For branding, ask what type of business they have and what they want branded.
-- Never pretend you have physically inspected a vehicle.
-- Never promise a completion date unless the customer has been given one by the business.
-- Never claim to have received a payment.
-- Never claim that an order has been confirmed unless the customer has actually contacted the business and confirmed it.
-- If the customer wants to order, direct them to WhatsApp or phone.
-- Keep answers practical and easy to understand.
-- Use simple English.
-- You may naturally use a little Kenyan/Sheng language when appropriate, but remain clear and professional.
-- Be friendly and helpful.
-- Do not give unnecessarily long answers.
-- If a customer is unsure what service they need, help them decide.
+    const response =
+      await fetch(
+        AI_API,
+        {
+          method:"POST",
 
+          headers:{
+            "Content-Type":
+              "application/json",
 
-CONTACT INFORMATION:
+            "Accept":
+              "application/json"
+          },
 
-Phone:
-0758 560 246
+          body:JSON.stringify({
 
-WhatsApp:
-+254 758 560 246
+            message:message,
 
-Email:
-omwandhopeter89@gmail.com
+            history:
+              conversationHistory.slice(-12)
 
-Location:
-Thika, Kiganjo, Kenya
-
-
-WHEN CUSTOMERS ASK "WHO ARE YOU?":
-
-Say that you are OMWANDHO AI, the official AI assistant for Omwandho Graphic & Auto Lab.
-
-
-WHEN CUSTOMERS ASK FOR WHATSAPP:
-
-Tell them they can contact Omwandho Graphic & Auto Lab on:
-+254 758 560 246
-
-WhatsApp link:
-https://wa.me/254758560246
-
-
-WHEN CUSTOMERS ASK WHERE YOU ARE:
-
-Say:
-"We are based in Thika, Kiganjo, Kenya."
-
-
-WHEN CUSTOMERS WANT A QUOTE:
-
-Do not invent the price.
-
-Instead ask for the project details needed to prepare a quotation.
-
-
-WHEN CUSTOMERS WANT TO SPEAK TO A PERSON:
-
-Tell them to call or WhatsApp:
-0758 560 246
-
-
-IDENTITY:
-
-You are not a generic AI assistant.
-
-You are OMWANDHO AI.
-
-Always represent Omwandho Graphic & Auto Lab professionally.
-`;
-
-
-/* =========================================================
-   EXTRACT TEXT FROM GEMINI RESPONSE
-========================================================= */
-
-function extractGeminiText(data) {
-
-  try {
-
-    if (
-      data &&
-      Array.isArray(data.candidates) &&
-      data.candidates.length > 0
-    ) {
-
-      const candidate = data.candidates[0];
-
-      if (
-        candidate.content &&
-        Array.isArray(candidate.content.parts)
-      ) {
-
-        const text = candidate.content.parts
-          .map(part => part.text || "")
-          .join("")
-          .trim();
-
-        if (text) {
-          return text;
+          })
         }
+      );
 
-      }
+
+    const data =
+      await response.json();
+
+
+    loading.remove();
+
+
+    if(!response.ok || !data.success){
+
+      addMessage(
+        data.error ||
+        "Sorry, I could not respond right now. Please contact us on WhatsApp.",
+        "ai"
+      );
+
+      return;
 
     }
 
-  } catch (error) {
+
+    addMessage(
+      data.reply,
+      "ai"
+    );
+
+
+    conversationHistory.push(
+      {
+        role:"user",
+        text:message
+      }
+    );
+
+
+    conversationHistory.push(
+      {
+        role:"assistant",
+        text:data.reply
+      }
+    );
+
+
+    conversationHistory =
+      conversationHistory.slice(-12);
+
+
+  }catch(error){
+
+    loading.remove();
+
+    addMessage(
+      "I couldn't connect right now. Please try again or contact us on WhatsApp: 0758 560 246.",
+      "ai"
+    );
 
     console.error(
-      "Gemini response extraction error:",
+      "OMWANDHO AI error:",
       error
     );
 
   }
 
-  return null;
+}
+
+
+/* ================= AI FORM ================= */
+
+aiForm.addEventListener(
+  "submit",
+  function(event){
+
+    event.preventDefault();
+
+    const message =
+      aiInput.value.trim();
+
+    if(message){
+
+      sendAIMessage(message);
+
+    }
+
+  }
+);
+
+
+/* ================= QUICK AI ================= */
+
+function askAI(message){
+
+  openAI();
+
+  sendAIMessage(message);
 
 }
 
 
-/* =========================================================
-   CHAT HANDLER
-========================================================= */
+/* ================= QUOTE FORM ================= */
 
-async function handleChat(request, env) {
+document
+  .getElementById("quoteForm")
+  .addEventListener(
+    "submit",
+    function(event){
 
-  /*
-  ---------------------------------------------------------
-  CHECK API KEY
-  ---------------------------------------------------------
-  */
+      event.preventDefault();
 
-  if (!env.GEMINI_API_KEY) {
 
-    console.error(
-      "GEMINI_API_KEY is missing."
-    );
+      const name =
+        document.getElementById("quoteName").value.trim();
 
-    return jsonResponse(
-      {
-        success: false,
-        assistant: BUSINESS.assistant,
-        error: "Gemini API key is not configured on the server."
-      },
-      500
-    );
+      const service =
+        document.getElementById("quoteService").value;
 
-  }
+      const size =
+        document.getElementById("quoteSize").value.trim();
 
+      const quantity =
+        document.getElementById("quoteQuantity").value.trim();
 
-  /*
-  ---------------------------------------------------------
-  READ REQUEST BODY
-  ---------------------------------------------------------
-  */
+      const details =
+        document.getElementById("quoteDetails").value.trim();
 
-  let body;
 
-  try {
+      const text =
+`Hello Omwandho Graphic & Auto Lab 👋
 
-    body = await request.json();
+I would like to request a quotation.
 
-  } catch (error) {
+Name: ${name}
 
-    return jsonResponse(
-      {
-        success: false,
-        assistant: BUSINESS.assistant,
-        error: "Invalid JSON request."
-      },
-      400
-    );
+Service: ${service}
 
-  }
+Size / Vehicle: ${size || "Not specified"}
 
+Quantity: ${quantity || "Not specified"}
 
-  /*
-  ---------------------------------------------------------
-  ACCEPT DIFFERENT MESSAGE FIELD NAMES
-  ---------------------------------------------------------
-  */
+Project details:
+${details}
 
-  let message = "";
+Please let me know the quotation and any additional information you need. Thank you.`;
 
-  if (typeof body.message === "string") {
 
-    message = body.message.trim();
+      const whatsappURL =
+        "https://wa.me/254758560246?text=" +
+        encodeURIComponent(text);
 
-  }
 
-  else if (typeof body.prompt === "string") {
-
-    message = body.prompt.trim();
-
-  }
-
-  else if (typeof body.text === "string") {
-
-    message = body.text.trim();
-
-  }
-
-
-  /*
-  ---------------------------------------------------------
-  VALIDATE MESSAGE
-  ---------------------------------------------------------
-  */
-
-  if (!message) {
-
-    return jsonResponse(
-      {
-        success: false,
-        assistant: BUSINESS.assistant,
-        error: "Please enter a message."
-      },
-      400
-    );
-
-  }
-
-
-  /*
-  ---------------------------------------------------------
-  PROTECT WORKER FROM EXTREMELY LARGE REQUESTS
-  ---------------------------------------------------------
-  */
-
-  if (message.length > 10000) {
-
-    return jsonResponse(
-      {
-        success: false,
-        assistant: BUSINESS.assistant,
-        error: "Message is too long. Please send a shorter message."
-      },
-      413
-    );
-
-  }
-
-
-  /*
-  ---------------------------------------------------------
-  OPTIONAL CONVERSATION HISTORY
-  ---------------------------------------------------------
-  */
-
-  let history = [];
-
-  if (Array.isArray(body.history)) {
-
-    history = body.history
-      .filter(item =>
-        item &&
-        typeof item.role === "string" &&
-        typeof item.text === "string"
-      )
-      .slice(-12);
-
-  }
-
-
-  /*
-  ---------------------------------------------------------
-  BUILD GEMINI CONTENTS
-  ---------------------------------------------------------
-  */
-
-  const contents = [];
-
-
-  /*
-  Previous conversation
-  */
-
-  for (const item of history) {
-
-    const role =
-      item.role === "assistant" ||
-      item.role === "model"
-        ? "model"
-        : "user";
-
-    contents.push({
-
-      role: role,
-
-      parts: [
-        {
-          text: item.text.substring(0, 10000)
-        }
-      ]
-
-    });
-
-  }
-
-
-  /*
-  Current customer message
-  */
-
-  contents.push({
-
-    role: "user",
-
-    parts: [
-      {
-        text: message
-      }
-    ]
-
-  });
-
-
-  /*
-  ---------------------------------------------------------
-  GEMINI REQUEST
-  ---------------------------------------------------------
-  */
-
-  const geminiPayload = {
-
-    systemInstruction: {
-
-      parts: [
-        {
-          text: SYSTEM_INSTRUCTION
-        }
-      ]
-
-    },
-
-    contents: contents,
-
-    generationConfig: {
-
-      temperature: 0.7,
-
-      maxOutputTokens: 1000
+      window.open(
+        whatsappURL,
+        "_blank"
+      );
 
     }
+  );
+
+
+/* ================= SHARE ================= */
+
+async function shareWebsite(){
+
+  const shareData = {
+
+    title:
+      "Omwandho Graphic & Auto Lab",
+
+    text:
+      "Check out Omwandho Graphic & Auto Lab — Graphic Design, Printing, Branding and Automotive Services.",
+
+    url:
+      window.location.href
 
   };
 
 
-  /*
-  ---------------------------------------------------------
-  CALL GEMINI
-  ---------------------------------------------------------
-  */
+  if(
+    navigator.share
+  ){
 
-  let geminiResponse;
+    try{
 
-  try {
+      await navigator.share(
+        shareData
+      );
 
-    geminiResponse = await fetch(
-      GEMINI_API_URL,
-      {
-        method: "POST",
+    }catch(error){}
 
-        headers: {
+  }else{
 
-          "Content-Type":
-            "application/json",
+    try{
 
-          "x-goog-api-key":
-            env.GEMINI_API_KEY
+      await navigator.clipboard.writeText(
+        window.location.href
+      );
 
-        },
+      alert(
+        "Website link copied. You can now share it."
+      );
 
-        body:
-          JSON.stringify(geminiPayload)
+    }catch(error){
 
-      }
-    );
-
-  } catch (error) {
-
-    console.error(
-      "Gemini network error:",
-      error
-    );
-
-    return jsonResponse(
-      {
-        success: false,
-        assistant: BUSINESS.assistant,
-        error: "Could not reach the Gemini service.",
-        details: error.message
-      },
-      502
-    );
-
-  }
-
-
-  /*
-  ---------------------------------------------------------
-  READ GEMINI RESPONSE
-  ---------------------------------------------------------
-  */
-
-  const rawGeminiResponse =
-    await geminiResponse.text();
-
-
-  console.log(
-    "Gemini HTTP status:",
-    geminiResponse.status
-  );
-
-
-  /*
-  ---------------------------------------------------------
-  GEMINI ERROR
-  ---------------------------------------------------------
-  */
-
-  if (!geminiResponse.ok) {
-
-    console.error(
-      "Gemini API error:",
-      rawGeminiResponse
-    );
-
-
-    let errorDetails =
-      "Gemini API request failed.";
-
-    try {
-
-      const errorJSON =
-        JSON.parse(rawGeminiResponse);
-
-      if (
-        errorJSON &&
-        errorJSON.error &&
-        errorJSON.error.message
-      ) {
-
-        errorDetails =
-          errorJSON.error.message;
-
-      }
-
-    } catch (error) {
-
-      if (rawGeminiResponse) {
-
-        errorDetails =
-          rawGeminiResponse.substring(
-            0,
-            1000
-          );
-
-      }
-
-    }
-
-
-    return jsonResponse(
-      {
-        success: false,
-        assistant: BUSINESS.assistant,
-        error: errorDetails,
-        model: AI_MODEL
-      },
-      geminiResponse.status
-    );
-
-  }
-
-
-  /*
-  ---------------------------------------------------------
-  PARSE GEMINI JSON
-  ---------------------------------------------------------
-  */
-
-  let geminiData;
-
-  try {
-
-    geminiData =
-      JSON.parse(rawGeminiResponse);
-
-  } catch (error) {
-
-    console.error(
-      "Gemini returned invalid JSON:",
-      rawGeminiResponse
-    );
-
-    return jsonResponse(
-      {
-        success: false,
-        assistant: BUSINESS.assistant,
-        error: "Gemini returned an invalid response."
-      },
-      502
-    );
-
-  }
-
-
-  /*
-  ---------------------------------------------------------
-  EXTRACT AI REPLY
-  ---------------------------------------------------------
-  */
-
-  const reply =
-    extractGeminiText(geminiData);
-
-
-  /*
-  ---------------------------------------------------------
-  NO REPLY
-  ---------------------------------------------------------
-  */
-
-  if (!reply) {
-
-    console.error(
-      "No text found in Gemini response:",
-      JSON.stringify(geminiData)
-    );
-
-    return jsonResponse(
-      {
-        success: false,
-        assistant: BUSINESS.assistant,
-        error: "Gemini returned no text response."
-      },
-      502
-    );
-
-  }
-
-
-  /*
-  ---------------------------------------------------------
-  SUCCESS
-  ---------------------------------------------------------
-  */
-
-  return jsonResponse(
-    {
-      success: true,
-      online: true,
-      assistant: BUSINESS.assistant,
-      business: BUSINESS.name,
-      model: AI_MODEL,
-      reply: reply
-    },
-    200
-  );
-
-}
-
-
-/* =========================================================
-   HEALTH ENDPOINT
-========================================================= */
-
-function handleHealth(env) {
-
-  return jsonResponse(
-    {
-      success: true,
-      online: true,
-      assistant: BUSINESS.assistant,
-      business: BUSINESS.name,
-      model: AI_MODEL,
-      geminiConfigured:
-        Boolean(env.GEMINI_API_KEY),
-      message:
-        "OMWANDHO AI Assistant is online."
-    }
-  );
-
-}
-
-
-/* =========================================================
-   BUSINESS ENDPOINT
-========================================================= */
-
-function handleBusiness() {
-
-  return jsonResponse(
-    {
-      success: true,
-      business: BUSINESS.name,
-      assistant: BUSINESS.assistant,
-      location: BUSINESS.location,
-      phone: BUSINESS.phone,
-      email: BUSINESS.email,
-      whatsapp: BUSINESS.whatsapp
-    }
-  );
-
-}
-
-
-/* =========================================================
-   SERVICES ENDPOINT
-========================================================= */
-
-function handleServices() {
-
-  return jsonResponse(
-    {
-      success: true,
-
-      services: [
-
-        {
-          name: "Graphic Design",
-
-          subservices: [
-            "Logo Design",
-            "Poster Design",
-            "Flyer Design",
-            "Business Card Design",
-            "Menu Design",
-            "Social Media Designs",
-            "Invitation & Event Designs",
-            "Certificate & Document Design"
-          ]
-
-        },
-
-        {
-          name: "Printing",
-
-          subservices: [
-            "Banner Printing",
-            "Poster Printing",
-            "Business Card Printing",
-            "Sticker Printing",
-            "Labels",
-            "Menus & Flyers",
-            "Large Format Printing",
-            "Custom Printing"
-          ]
-
-        },
-
-        {
-          name: "Business Branding",
-
-          subservices: [
-            "Shop Branding",
-            "Business Signage",
-            "Vehicle Branding",
-            "Banner + Frame + Stand",
-            "Product Branding",
-            "Corporate Branding",
-            "Event Branding"
-          ]
-
-        },
-
-        {
-          name: "Car Painting",
-
-          subservices: [
-            "Full Car Painting",
-            "Panel Painting",
-            "Scratch & Damage Repair",
-            "Colour Change",
-            "Touch-Up Painting",
-            "Custom Automotive Finishing"
-          ]
-
-        }
-
-      ]
-
-    }
-  );
-
-}
-
-
-/* =========================================================
-   WHATSAPP ENDPOINT
-========================================================= */
-
-function handleWhatsApp() {
-
-  return jsonResponse(
-    {
-      success: true,
-      phone: BUSINESS.phone,
-      whatsapp: BUSINESS.whatsapp
-    }
-  );
-
-}
-
-
-/* =========================================================
-   MAIN WORKER
-========================================================= */
-
-export default {
-
-  async fetch(request, env) {
-
-    /*
-    -------------------------------------------------------
-    BASIC REQUEST INFORMATION
-    -------------------------------------------------------
-    */
-
-    const url =
-      new URL(request.url);
-
-    const path =
-      url.pathname.replace(/\/+$/, "") || "/";
-
-    const method =
-      request.method.toUpperCase();
-
-
-    console.log(
-      `${method} ${path}`
-    );
-
-
-    /*
-    -------------------------------------------------------
-    CORS PREFLIGHT
-    -------------------------------------------------------
-    */
-
-    if (method === "OPTIONS") {
-
-      return handleOptions();
-
-    }
-
-
-    /*
-    -------------------------------------------------------
-    HEALTH
-    -------------------------------------------------------
-    */
-
-    if (
-      path === "/health" &&
-      method === "GET"
-    ) {
-
-      return handleHealth(env);
-
-    }
-
-
-    /*
-    -------------------------------------------------------
-    BUSINESS
-    -------------------------------------------------------
-    */
-
-    if (
-      path === "/business" &&
-      method === "GET"
-    ) {
-
-      return handleBusiness();
-
-    }
-
-
-    /*
-    -------------------------------------------------------
-    SERVICES
-    -------------------------------------------------------
-    */
-
-    if (
-      path === "/services" &&
-      method === "GET"
-    ) {
-
-      return handleServices();
-
-    }
-
-
-    /*
-    -------------------------------------------------------
-    WHATSAPP
-    -------------------------------------------------------
-    */
-
-    if (
-      path === "/whatsapp" &&
-      method === "GET"
-    ) {
-
-      return handleWhatsApp();
-
-    }
-
-
-    /*
-    -------------------------------------------------------
-    CHAT
-    -------------------------------------------------------
-    */
-
-    if (
-      path === "/chat" &&
-      method === "POST"
-    ) {
-
-      return handleChat(
-        request,
-        env
+      alert(
+        "Copy this website address from your browser."
       );
 
     }
 
-
-    /*
-    -------------------------------------------------------
-    ROOT
-    -------------------------------------------------------
-    */
-
-    if (
-      path === "/" &&
-      method === "GET"
-    ) {
-
-      return jsonResponse(
-        {
-          success: true,
-          online: true,
-          assistant: BUSINESS.assistant,
-          business: BUSINESS.name,
-
-          endpoints: {
-            chat: "/chat",
-            business: "/business",
-            services: "/services",
-            whatsapp: "/whatsapp",
-            health: "/health"
-          }
-        }
-      );
-
-    }
-
-
-    /*
-    -------------------------------------------------------
-    METHOD NOT ALLOWED
-    -------------------------------------------------------
-    */
-
-    if (
-      path === "/chat" &&
-      method !== "POST"
-    ) {
-
-      return jsonResponse(
-        {
-          success: false,
-          error:
-            "The /chat endpoint requires POST."
-        },
-        405
-      );
-
-    }
-
-
-    /*
-    -------------------------------------------------------
-    NOT FOUND
-    -------------------------------------------------------
-    */
-
-    return jsonResponse(
-      {
-        success: false,
-        error: "Endpoint not found.",
-        availableEndpoints: [
-          "/",
-          "/health",
-          "/business",
-          "/services",
-          "/whatsapp",
-          "/chat"
-        ]
-      },
-      404
-    );
-
   }
 
-};
+}
+
+
+/* ================= YEAR ================= */
+
+document
+  .getElementById("year")
+  .textContent =
+  new Date().getFullYear();
+
+
+/* ================= CLOSE MOBILE MENU ================= */
+
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(function(link){
+
+    link.addEventListener(
+      "click",
+      function(){
+
+        document
+          .getElementById("navLinks")
+          .classList.remove("show");
+
+      }
+    );
+
+  });
+
+</script>
+
+</body>
+</html>
